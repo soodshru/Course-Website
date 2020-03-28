@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta name='viewport'  content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' type='text/css' href="static/StyleSheets/Basiclayout.css">
+        <link rel='stylesheet' type='text/css' href="static/fonts/fontawesome/css/all.css">
+        <link rel='stylesheet' type='text/css' href="static/StyleSheets/instructorGrades.css">
+        <title>Profile</title>
+  </head>
+    <body id="main">
+        <nav>
+                        <ul class="navbarContainer">
+                                <li class="navBarItems nav-condensedMenu">
+                                        <i class="fas fa-bars" id='opensidebttn'></i>
+                                        <ul class="navBar-SubmenuContainer" id="sideNav">
+                                                <li id="closesidebttn" class="Submenu-item closeBTTN fas fa-times"></li>
+                                                <li class="Submenu-item"><a href="assignments.html">Assignment</a></li>
+                                                <li class="Submenu-item"><a href="lab.html">Lab</a></li>
+                                                <li class="Submenu-item"><a href="Lecture.html">Lecture</a></li>
+                                                <li class="Submenu-item"><a href="resources.html">Resources</a></li>
+                                                <li class="Submenu-item"><a href="contacts.html">Contact Us</a></li>
+                                                <li class="Submenu-item"><a href="/logout">Logout</a></li>
+                                        </ul> <!-- end of Navbar sub menu -->
+                                </li>
+                                <li class="navBarItems Middle-Navcontent"><a href='signIn_Index.html'>Home</a></li>
+                                <li class="navBarItems"><a href='/profile'>Profile</a></li>
+                        </ul> <!--  end navbar container -->
+                </nav> <!-- end of nav bar section -->
+        
+        <div class="mainContainer">
+            <div class="gradesDisplayContainer">
+               <div class="controls">
+               		<button class="controlbttn" type="button" id= "newentryform">Add New Entry</button>
+               		<button class="controlbttn" type="button" id= "viewremarkrequest">View Remark Request</button>
+               		<button class="controlbttn" type="button" id= "changegradeform">Change Grade</button>
+               </div>
+               <div class="gradesTable">
+                 <p class = "ID">UtorID</p>
+                 <p class = "Category">Category</p>
+                 <p class = "Date">Date</p>
+                 <p class = "Grade">Grade</p>
+               </div>
+               <div class="gradesTable">
+               		<header id="GradesHeader">Student Grades</header>
+                  <button class="SectionCollapsible" id="Quiz1Header">Quiz Marks</button>
+                  <div class="CollapsibleContent">
+                    {% for quizgrade in quizgrades %}
+                    <div class="QuizContent">
+                    <p class = "ID">{{ quizgrade['UtorID'] }} </p>
+                    <p class = "Category">{{ quizgrade['Category'] }} </p>
+                    <p class = "Date"> {{ quizgrade['Date'] }}</p>
+                    <p class = "Grade">{{ quizgrade['Grade'] }}</p>
+                    </div><br>
+                    {% endfor %}
+                  </div>
+                  <button class="SectionCollapsible" id="AssignMarks">Assignment Marks</button>
+                  <div class="CollapsibleContent">
+                    {% for assigngrade in assigngrades %}
+                    <div class="AssignContent">
+                    <p class = "ID">{{ assigngrade['UtorID'] }} </p>
+                    <p class = "Category">{{ assigngrade['Category'] }} </p>
+                    <p class = "Date"> {{ assigngrade['Date'] }}</p>
+                    <p class = "Grade">{{ assigngrade['Grade'] }}</p>
+                    </div><br>
+                    {% endfor %}
+                  </div>
+                  <button class="SectionCollapsible" id="MidtermHeader">Midterm Marks</button>
+                  <div class="CollapsibleContent">
+                    {% for midtermgrade in midtermgrades %}
+                    <div class="MidtermContent">
+                    <p class = "ID">{{ midtermgrade['UtorID'] }} </p>
+                    <p class = "Category">{{ midtermgrade['Category'] }} </p>
+                    <p class = "Date"> {{ midtermgrade['Date'] }}</p>
+                    <p class = "Grade">{{ midtermgrade['Grade'] }}</p>
+                    </div><br>
+                    {% endfor %}
+                  </div>
+                  <button class="SectionCollapsible" id="FinalHeader">Final Marks</button>
+                  <div class="CollapsibleContent">
+                    {% for finalgrade in finalgrades %}
+                    <div class="FinalContent">
+                    <p class = "ID">{{ finalgrade['UtorID'] }} </p>
+                    <p class = "Category">{{ finalgrade['Category'] }} </p>
+                    <p class = "Date"> {{ finalgrade['Date'] }}</p>
+                    <p class = "Grade">{{ finalgrade['Grade'] }}</p>
+                    </div><br>
+                    {% endfor %}
+                  </div>
+
+               </div>
+           	</div>
+        </div> <!--end of profile display container-->
+        <div class="ModalWindow" id="NewEntrymodalWindow">
+            <form action="newentryform" method="post" class="RequestItemsCon">
+              <input type="button" id="closebttn" class=" Request__submitBTTN" value="X">
+              <input name = "UtorID" type="text" class="Request__items" placeholder="Student ID" required>
+              <input name = "NewEntry_Category" type="text" class="Request__items" placeholder="Grade Category" required>
+              <input name = "Date" type="text" class="Request__items" placeholder="Entry Date" required>
+              <input name = "Mark" type="text" class="Request__items" placeholder="Enter Mark" required>
+              <input type="submit" class="Request__submitBTTN" value="Submit">
+            </form><!-- end of form -->
+        </div> <!-- end of modal window-->
+        <div class="ModalWindow" id="RemarkModalWindow">
+          <button type="button" id="closebttn2" class="Request__submitBTTN">X</button>
+          <div class="RequestItemsCon">
+            <div class="Feedback_Items">
+              {% for remark in remarks %}
+              <p> {{ remark['UtorID'] }} </p>
+              <p> {{ remark['RemarkCategory'] }}</p>
+              <p> {{ remark['RemarkInfo'] }}</p>
+              <br>
+              {% endfor %}
+            </div>
+          </div>
+      </div> <!-- end of modal window-->
+      <div class="ModalWindow" id="changeGradeModalWindow">
+            <form action="changegradeform" method="post" class="RequestItemsCon">
+              <input type="button" id="closebttn1" class=" Request__submitBTTN" value="X">
+              <input name = "UtorID" type="text" class="Request__items" placeholder="Student ID" required>
+              <input name = "Entry_Category" type="text" class="Request__items" placeholder="Grade Category" required>
+              <input name = "NewDate" type="text" class="Request__items" placeholder="New Entry Date" required>
+              <input name = "NewMark" type="text" class="Request__items" placeholder="Enter New Mark" required>
+              <input type="submit" class="Request__submitBTTN" value="Submit">
+            </form><!-- end of form -->
+      </div> <!-- end of modal window-->
+        <div class='fNote'>
+            <div class='fNoteContent'>
+                <a href='http://web.cs.toronto.edu'> UofT Computer Science Department </a>
+                <p> Site Design by Anshul & George </p>
+            </div><!--footer content div -->
+            <div class='socialButton'>
+                <a href="https://www.facebook.com/UofTCompSci/" class="social fab fa-facebook-f"></a>
+                <a href="https://twitter.com/UofTCompSci?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class=" social fab fa-twitter"></a>
+                <a href='https://www.utoronto.ca' class="social fas fa-university"></a>
+            </div><!-- end of All socialButton div-->
+        </div><!-- end of footer div-->
+        <script type='text/javascript' src="static/Jscripts/submenu.js"></script>
+        <script type="text/javascript" src="static/Jscripts/modal1.js"></script>
+    </body>
+</html>

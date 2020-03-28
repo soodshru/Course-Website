@@ -1,0 +1,294 @@
+.navbarContainer{
+    display:flex;
+    height: 90px;
+    background-color: #192C4B;
+    justify-content: flex-end;
+    
+}
+
+.navbarItem{
+    color:white;
+    font-family:Helvetica Neue, san-serif, serif;
+    font-weight: lighter;
+    font-size:40px;
+    margin:20px 40px 0px 67px;
+    padding:5px;
+    list-style: none;
+    text-align: center;
+    
+}
+
+
+.contentHeader{
+    background-image:url('../images/ContentHeader/ICwindowsUp.jpg');
+	background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+	background-repeat:no-repeat;
+	width:100%;
+	height: 900px;
+    display:flex;
+    align-items: center;
+	justify-content: center;
+    
+    
+}
+
+.HeadText{
+    width:1200px;
+    height:45%;
+    border:none;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+	
+}
+
+.HeadText #Quote{
+	font-size:50px;
+	font-weight:bold;
+	color:white;
+	font-style: oblique;
+	width:70%;
+	text-align:center;
+    border:none;
+    
+}
+#Quote::before{
+	content:open-quote;
+	font-size:70px;
+	font-family:lato;
+	color:#EAEAEA;
+}
+
+#Quote::after{
+	content:close-quote;
+	font-size:70px;
+	color:#EAEAEA;
+}
+
+ #QAuthor{
+	font-size:40px;
+	font-weight:bold;
+	font-style:italic;
+	color:white;
+    text-align: center;
+	
+}
+
+.InfoContainer{
+	display:flex;
+	flex-direction:column;
+    align-items: center;
+    justify-content: center;
+	height:900px;
+    border:none;
+}
+
+/* css that is applied to all three at the same time*/
+.InfoSection{
+	width:100%;
+	height:100%;
+}
+
+.Descr {
+	display:flex;
+	align-items:center;
+	background-color:#60767E;
+}
+
+.course-image {
+	flex:1;
+	width:50%;
+}
+
+.Descr-text{
+	flex:1;
+	display:flex;
+	flex-direction:column;
+	padding:40px;
+	align-self:flex-start;
+	height:100%;
+	color:#F1F1F1;
+}
+
+.Descr-text #Title {
+	flex:1, 1;
+	font-family:lato;
+    font-size:60px;
+    font-weight: bold;
+	text-align: center;
+}
+
+.Descr-text #DescrHeading{
+	flex:1,1 ;
+	font-family:lato;
+    font-size: 50px;
+    font-style:none;
+    font-weight: bold;
+	text-align:left;
+	padding-top:30px;
+}
+
+.Descr-text #description {
+	flex:1;
+	font-family:lato;
+    font-size: 25px;
+    font-style:none;
+    font-weight: bold;
+	text-align:justify;
+	padding-left:25px;
+}
+
+.Descr-text .extras{
+	flex:1, 1;
+	font-family:lato;
+    font-size: 20px;
+    font-style:none;
+    font-weight: bold;
+	text-align:justify;
+	padding-top:5px;
+	padding-left:40px;
+}
+
+.Descr-text .extra-heading{
+	flex:1, 1;
+	font-family:lato;
+    font-size: 20px;
+    font-style:none;
+    font-weight: bold;
+	text-align:justify;
+	padding-top:15px;
+}
+
+.syllabus{
+    flex:1,1;
+	font-family:lato;
+    font-size: 20px;
+    font-style:none;
+    font-weight: bold;
+	text-align:center;
+	padding-top:15px;
+    align-self: center;
+    opacity:0.5;
+}
+
+.syllabus:hover{
+    opacity:1;
+    cursor: pointer;
+    
+}
+
+.cal {
+	background-image:url('../images/contentHeader/steal.png');
+	background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+	background-repeat:no-repeat;
+	width:100%;
+    display:flex;
+	
+}
+
+.cal-Item{
+    width:800px;
+    height:830px;
+    border:none;
+    flex:1;
+    
+    
+}
+
+.AnnounceContainer{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:50px;
+    overflow:auto;
+    
+}
+
+.AnnounceContainer h1{
+    
+    font-size:80px;
+    color:black;
+    font-style:oblique;
+}
+
+.Annoucement-box{
+    border:none;
+    width:50%;
+    height:30%;
+    padding:30px;
+    border-radius:30px;
+    margin:20px;
+    background-color:aliceblue;
+    box-shadow:0px 20px 20px #888888;
+    
+}
+
+.Annoucement-box p{
+    
+    font-family:lato;
+    font-size:25px;
+    text-align:justify;
+    padding-top:20px;
+}
+
+
+.Tests{
+    background-color:aliceblue;
+    display:flex;
+    justify-content:space-around;
+}
+
+.Tests .info-text h2{
+    
+    font-size:60px;
+    padding:50px 30px 10px 20px;
+    border:none;
+    
+}
+
+.Tests .info-text p{
+    
+    font-size:40px;
+    padding:10px 10px 10px 35px;
+}
+
+.midterm-page{
+    align-self:center;
+    width:30%;
+    height:60%;
+    box-shadow: 0px 10px 20px;
+}
+
+.pastExamBttn{
+    background-color: white;
+    color:#C9D1D4;
+    border:none;
+    padding:0px 0px;
+    text-align:center;
+    text-decoration: none;
+    font-size:30px;
+    font-weight: bold;
+    -webkit-transition-duration:400ms;
+    transition-duration: 400ms;
+    cursor:pointer;
+    width:40%;
+    border-radius: 10px;
+    margin-top:40px;
+    margin-right:40px;
+    height:10%;
+    opacity:0.5;
+    display:inline-block;
+    
+}
+
+.pastExamBttn:hover {
+    background-color:#e7e7e7;
+    color: black; 
+    opacity:1;
+}
+

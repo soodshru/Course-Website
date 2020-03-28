@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport'  content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' type='text/css' href='static/StyleSheets/Basiclayout.css' />
+	<link rel='stylesheet' type='text/css' href='static/StyleSheets/accounts.css' />
+	<link rel='stylesheet' type='text/css' href='static/StyleSheets/signup.css' />
+        <link rel='stylesheet' type='text/css' href='static/fonts/fontawesome/css/all.css' />
+        <title>Sign up</title>
+    </head>
+    <body>
+        <nav><!-- nav bar container-->
+            <ul class="navbarContainer"><!-- navbar enclosure-->
+                <li class="navBarItems"> <a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+
+        <div class="mainContainer">
+            <div class='messageContainer'>
+                <p class='SignMesssage'>View Course Content, updated marks, and submit re-mark requests </p>
+                <p class='SignMesssage'>Provide our team with feedback so that we can best fit your academic goals</p> 
+				<p>already have an account? Sign in</p>
+            </div>
+            <div class="userContainer">
+                <img class ='Coat-arms 'src='static/images/Figures/Utoronto_coa.png'>
+                <form action="signupform" method='post' class="userForm">
+                    <p id='box-header'>Sign Up</p>
+			<input type="text" name='firstname'  class="userInput First-Name" id='firstName' placeholder='First Name' required>
+			<input type="text" name='lastname' class="userInput Last-Name" id='lastName' placeholder='Last Name' required>
+			<input type="email" name='UtorEmail' class="userInput User-Name" id='email' placeholder='Utoronto Email' required>
+			<input type="text" name='UtorID' class="userInput User-Name" id='utorid' placeholder='UtorID' required>
+			<input type="password" name='Password' class="userInput Password" id='password' placeholder='Passsword' required>
+			<select name='usertype' class='userType' required>
+			    <option class='accountType' value='' id='acctype'>Select Account Type</option>
+			    <option class='accountType' value='INSTRUCTOR' id='acctype'>INSTRUCTOR</option>
+			    <option class='accountType' value='STUDENT' id='acctype'>STUDENT</option>
+			</select>
+                    <input type='submit' value='SignUp' class="logBttn">
+                </form><!--end of sign in form-->
+            </div><!-- End of sign up container-->
+        </div><!--end of main container-->
+
+        <div class='fNote'>
+            <div class='fNoteContent'>
+                <a href='http://web.cs.toronto.edu'> UofT Computer Science Department </a>
+                <p> Site Design by Anshul & George </p>
+            </div><!--footer content div -->
+			<div class='socialButton'>
+				<a href="https://www.facebook.com/UofTCompSci/" class="social fab fa-facebook-f"></a>
+				<a href="https://twitter.com/UofTCompSci?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class=" social fab fa-twitter"></a>
+                <a href='https://www.utoronto.ca' class="social fas fa-university"></a>
+			</div><!-- end of All socialButton div-->
+        </div><!-- end of footer div-->
+    </body>
+</html>

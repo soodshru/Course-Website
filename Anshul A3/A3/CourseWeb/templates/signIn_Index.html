@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport'  content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' type='text/css' href="static/StyleSheets/BasicLayout.css">
+        <link rel='stylesheet' type='text/css' href="static/StyleSheets/SignIn_Homepage.css">
+        <link rel='stylesheet' type='text/css' href="static/StyleSheets/mobile.css">
+		<link rel='stylesheet' type='text/css' href="static/fonts/fontawesome/css/all.css">
+        
+        <title>Home</title>
+    </head>
+    <body id="main">
+        <nav>
+			<ul class="navbarContainer">
+				<li class="navBarItems nav-condensedMenu">
+					<i class="fas fa-bars" id='opensidebttn'></i>
+					<ul class="navBar-SubmenuContainer" id="sideNav">
+						<li id="closesidebttn" class="Submenu-item closeBTTN fas fa-times"></li>
+						<li class="Submenu-item"><a href="assignments.html">Assignment</a></li>
+						<li class="Submenu-item"><a href="lab.html">Lab</a></li>
+						<li class="Submenu-item"><a href="Lecture.html">Lecture</a></li>
+						<li class="Submenu-item"><a href="resources.html">Resources</a></li>
+						<li class="Submenu-item"><a href="contacts.html">Contact Us</a></li>
+                        <li class="Submenu-item"><a href="/logout">Logout</a></li>
+					</ul> <!-- end of Navbar sub menu -->
+				</li>
+				<li class="navBarItems Middle-Navcontent"><a href='signIn_Index.html'>Home</a></li>
+				<li class="navBarItems"><a href='/profile'>Profile</a></li>
+			</ul> <!--  end navbar container -->
+		</nav> <!-- end of nav bar section -->
+        <div class='contentHeader'>
+            <div class='HeadText'>
+				<p id='Quote'>Getting a quality website is not an expense but rather an investment</p>
+				<p id='QAuthor'>- Dr.Christopher Dayagadag</p>
+
+            </div><!--End of headText-->
+        </div><!--End of content Header Div-->
+        
+        <div class="InfoContainer">
+			<div class="Descr InfoSection">
+				<img class="course-image" src='static/images/Figures/Database.png'>
+				<div class='Descr-text'>
+					<p id='Title'>Introduction to DataBases & Web Applications</p>
+					<p id='DescrHeading'>Description</p>
+					<p id='description'>A practical introduction to databases and Web app development. Databases: terminology and applications; creating, querying and updating databases; the entity-relationship model for database design. Web documents and applications: static and interactive documents; Web servers and dynamic server-generated content; Web application development and interface with databases.</p>
+					<h3 class='extra-heading'> Prequisite </h3>
+					<p class='extras'>Some experience with programming in an imperative language such as Python, Java or C.</p>
+					<h3 class='extra-heading'> Exclusions </h3>
+					<p class='extras'>This course may not be taken after - or concurrently with - any C- or D-level CSC course. </p>
+                    <a href='static/Content/Syllabus/syllabus.pdf' target="_blank"><p class='syllabus'>Syllabus</p></a>
+				</div> <!--  end of descr-text div -->
+			</div> <!-- End of course description section -->
+            
+            			
+			<div class="cal InfoSection">
+                <iframe class="cal-Item" src="https://calendar.google.com/calendar/embed?src=062btcpe6ukskfptv62jsc7sug%40group.calendar.google.com&amp;ctz=America/Toronto" frameborder="0" scrolling="no"></iframe><!-- end of google calendar-->
+                
+                <div class="AnnounceContainer">
+                    <h1>Announcements</h1>
+                    <div class="__announcement1 Annoucement-box">
+                        <p>This is an announcement to this webpage! Welcome to the course!</p>
+                    </div>
+                    <div class="__announcement2 Annoucement-box">
+                        <p>Term Test Scheduled for Monday Febuary 13 at PM. Room assignment will be posted soon.</p>
+                    </div>
+                    <div class="__announcement3 Annoucement-box">
+                        <p>Room Assignments: Last name A-HE: HW 215 & Last name HO-Z: HW 216</p>
+                    </div>
+                
+                </div><!-- End of annoucement section-->
+			</div> <!-- End of calendar section -->
+			
+			<div class="Tests InfoSection">
+                <div class='info-text'>
+                    <h2>Midterm Date & Time</h2>
+                    <p>Monday Febuaray 13 at 5:00 pm</p>
+                    <h2>Location</h2>
+                    <p>Last name A-HE: HW 215</p>
+                    <p>Last name HO-Z: HW 216</p>
+                    <a href='static/Content/Midterm/testA.pdf' target="_blank"><button class='pastExamBttn'>View the Past Midterm Exam</button></a>
+                    <a href='static/Content/Final/final_f16.pdf' target="_blank"><button class='pastExamBttn'>View Past Final Exam</button></a>
+                </div>
+                <img class="midterm-page" src="static/images/Figures/MidtermPage.png">
+                
+			</div> <!-- End of tests section -->
+
+        </div><!-- End of Info div tag-->
+        
+        <div class='fNote'>
+            <div class='fNoteContent'>
+                <a href='http://web.cs.toronto.edu'> UofT Computer Science Department </a>
+                <p> Site Design by Anshul & George </p>
+            </div><!--footer content div -->
+			<div class='socialButton'>
+				<a href="https://www.facebook.com/UofTCompSci/" class="social fab fa-facebook-f"></a>
+				<a href="https://twitter.com/UofTCompSci?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class=" social fab fa-twitter"></a>
+                <a href='https://www.utoronto.ca' class="social fas fa-university"></a>
+			</div><!-- end of All socialButton div-->
+        </div><!-- end of footer div-->
+        <script type='text/javascript' src="static/Jscripts/submenu.js"></script>
+    </body>
+</html>

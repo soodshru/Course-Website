@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport'  content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' type='text/css' href="static/StyleSheets/Basiclayout.css">
+        <link rel='stylesheet' type='text/css' href="static/StyleSheets/contacts.css">
+        <link rel='stylesheet' type='text/css' href="static/fonts/fontawesome/css/all.css">
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+        <title>Contact Us</title>
+    </head>
+    <body id="main">
+        <nav>
+			<ul class="navbarContainer">
+				<li class="navBarItems nav-condensedMenu">
+					<i class="fas fa-bars" id='opensidebttn'></i>
+					<ul class="navBar-SubmenuContainer" id="sideNav">
+						<li id="closesidebttn" class="Submenu-item closeBTTN fas fa-times"></li>
+						<li class="Submenu-item"><a href="assignments.html">Assignment</a></li>
+						<li class="Submenu-item"><a href="lab.html">Lab</a></li>
+						<li class="Submenu-item"><a href="Lecture.html">Lecture</a></li>
+						<li class="Submenu-item"><a href="resources.html">Resources</a></li>
+						<li class="Submenu-item"><a href="contacts.html">Contact Us</a></li>
+                        <li class="Submenu-item"><a href="/logout">Logout</a></li>
+					</ul> <!-- end of Navbar sub menu -->
+				</li>
+				<li class="navBarItems Middle-Navcontent"><a href='signIn_Index.html'>Home</a></li>
+				<li class="navBarItems"><a href='/profile'>Profile</a></li>
+			</ul> <!--  end navbar container -->
+		</nav> <!-- end of nav bar section -->
+
+        <div class='contentHeader'>
+            <div class='parent-message'>
+                <div class='message'>
+                    <p> Meet Our Team</p>
+                </div>  <!-- end of Team message div -->
+            </div>
+			<div class='contactCard'>
+                <div class='card'>
+                    <img  class='contact-img' src= 'static/images/Miscellaneous/Anna_Bretscher.jpg'>
+                    <div class='CardDescr'>
+                        <h2> Dr. Anna Bretscher </h2>
+                        <p> Associate Professor </p>
+                    </div>
+                </div> <!-- End of card 1 -->
+				
+                <div class='card'>
+                    <img class='contact-img' src= 'static/images/Miscellaneous/unknown-person.gif'>
+                    <div class='CardDescr'>
+                        <h2> Kevin Zhang </h2>
+                        <p> Teaching Assistant </p>
+                        <p>kevin.zhang@mail.utoronto.ca</p>
+                    </div>
+				</div> <!-- End of Card 2 -->
+                
+                <div class='card'>
+                    <img class='contact-img' src= 'static/images/Miscellaneous/unknown-person.gif'>
+                    <div class='CardDescr'>
+                        <h2> Suhailah Rahman </h2>
+                        <p> Teaching Assistant </p>
+                        <p>suhailah.rahman@mail.utoronto.ca</p>
+                    </div>
+				</div> <!-- End of Card 3 -->
+                
+                
+                <div class='card'>
+                    <img class='contact-img' src= 'static/images/Miscellaneous/unknown-person.gif'>
+                    <div class='CardDescr'>
+                        <h2> Brian Lam </h2>
+                        <p> Teaching Assistant</p>
+                        <p>brian.lam@mail.utoronto.ca</p>
+                    </div>
+				</div> <!-- End of Card 4 -->
+			
+			</div> <!-- End of contact card div-->
+
+        </div><!--End of content Header Div-->
+        <div class='mainContainer'>
+            <div class="formContainer">
+                <p>How Can We Improve? </p>
+                <form action= '/FeedbackForm' method="post" class="formContainer__form">
+                    <select name='Contact_Instructor' class='inputSection__options'>
+                        <option class='inputSection__item' value='' id='emailContact'>Select who you would like to contact</option>
+                        {% for instructor in instructors %}
+                        <option class='inputSection__item' value= "{{instructor['Email']}}" id='emailContact'>{{instructor['FirstName'] + '  ' + instructor['LastName']}}
+                        </option>
+                        {% endfor %}
+                    </select>
+                    
+                    <label for="questions" class="inputSection__label">what do you like about the instructors </label>
+                    <input class="inputSection" name="Q1" id="questions" required />    
+                    <label for="questions" class="inputSection__label">What do you recommend the instructor to do to improve their teaching?</label>
+                    <input class="inputSection" name="Q2" id="questions"required />     
+                    <label for="questions" class="inputSection__label">What do you like about the labs?</label>
+                    <input class="inputSection" name="Q3" id="questions"required />     
+                    <label for="questions" class="inputSection__label">What do you recommend the lab instructors to do to improve their lab teaching? </label>
+                    <input class="inputSection" name="Q4" id="questions"required />     
+                    <input type="submit"class= "submitBttn" value="Submit" />
+                </form><!-- End of forrm field -->
+            </div>
+        </div><!--end of main container-->
+                
+
+        <div class='fNote'>
+            <div class='fNoteContent'>
+                <a href='http://web.cs.toronto.edu'> UofT Computer Science Department </a>
+                <p> Site Design by Anshul & George </p>
+            </div><!--footer content div -->
+			<div class='socialButton'>
+				<a href="https://www.facebook.com/UofTCompSci/" class="social fab fa-facebook-f"></a>
+				<a href="https://twitter.com/UofTCompSci?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class=" social fab fa-twitter"></a>
+                <a href='https://www.utoronto.ca' class="social fas fa-university"></a>
+			</div><!-- end of All socialButton div-->
+        </div><!-- end of footer div-->
+        <script type='text/javascript' src="static/Jscripts/submenu.js"></script>
+    </body>
+</html>

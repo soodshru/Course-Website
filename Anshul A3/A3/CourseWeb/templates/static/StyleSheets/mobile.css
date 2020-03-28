@@ -1,0 +1,187 @@
+@media screen and (max-width:750px){
+    
+    .contentHeader{
+        display:flex;
+        justify-content: center;
+        align-items:center;
+        height:800px;
+        width:100%;
+    }
+    
+    .InfoContainer{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        height:1600px;
+        border:none;
+    }
+    
+    .HeadText{
+        width:80%;
+        height:45%;
+        border:none;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #9EABC6;
+        border-radius:64px;
+        padding:50px;
+	
+    }
+    
+    .HeadText #Quote{
+        font-size:30px;
+        font-weight:bold;
+        color:white;
+        font-style: oblique;
+        width:70%;
+        text-align:center;
+        border:none;
+        z-index:1;
+        opacity:1;
+
+    }
+    #Quote::before{
+        content:open-quote;
+        font-size:40px;
+        font-family:lato;
+        color:#EAEAEA;
+    }
+
+    #Quote::after{
+        content:close-quote;
+        font-size:40px;
+        color:#EAEAEA;
+    }
+
+     #QAuthor{
+        font-size:20px;
+        font-weight:bold;
+        font-style:italic;
+        color:white;
+        text-align: center;
+
+    }
+    
+    
+    .course-image {
+        flex:1;
+        width:20%;
+        order:1;
+        align-self: flex-start;
+    }
+
+    .Descr-text{
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        padding:40px;
+        align-self:flex-start;
+        height:100%;
+        color:#F1F1F1;
+    }
+
+    .Descr-text #Title {
+        flex:1, 1;
+        font-family:lato;
+        font-size:25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .Descr-text #DescrHeading{
+        flex:1,1 ;
+        font-family:lato;
+        font-size: 20px;
+        font-style:none;
+        font-weight: bold;
+        text-align:left;
+        padding-top:30px;
+    }
+
+    .Descr-text #description {
+        flex:0;
+        font-family:lato;
+        font-size: 15px;
+        font-style:none;
+        font-weight: bold;
+        text-align:justify;
+        padding-left:25px;
+        line-height: 15px;
+    }
+
+    .Descr-text .extras{
+        flex:1, 1;
+        font-family:lato;
+        font-size: 15px;
+        font-style:none;
+        font-weight: bold;
+        text-align:justify;
+        padding-top:5px;
+        padding-left:40px;
+    }
+
+    .Descr-text .extra-heading{
+        flex:1, 1;
+        font-family:lato;
+        font-size: 20px;
+        font-style:none;
+        font-weight: bold;
+        text-align:justify;
+        padding-top:15px;
+    }
+
+    .syllabus{
+        flex:1,1;
+        font-family:lato;
+        font-size: 15px;
+        font-style:none;
+        font-weight: bold;
+        text-align:center;
+        padding-top:15px;
+        align-self: center;
+        opacity:0.5;
+    }
+    
+    .cal{
+        
+        display:flex;
+        flex-direction: column;
+        height:2000px;
+    }
+    
+    .AnnounceContainer h1{
+
+        font-size:60px;
+        color:black;
+        font-style:oblique;
+    }
+    
+    .Annoucement-box{
+        border:none;
+        width:60%;
+        height:70%;
+        padding:30px;
+        border-radius:30px;
+        margin:20px;
+        background-color:aliceblue;
+        box-shadow:0px 20px 20px #888888;
+
+    }
+    
+    .Tests .info-text h2{
+
+        font-size:40px;
+        padding:50px 30px 10px 20px;
+        border:none;
+
+    }
+
+    .Tests .info-text p{
+
+        font-size:20px;
+        padding:10px 10px 10px 35px;
+    }
+    
+} /*End of media aquery*/

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport'  content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' type='text/css' href="static/StyleSheets/Basiclayout.css">
+        <link rel='stylesheet' type='text/css' href="static/fonts/fontawesome/css/all.css">
+	<link rel='stylesheet' type='text/css' href="static/StyleSheets/resourse.css">
+        <title>Resourses</title>
+    </head>
+    <body id="main">
+        <nav>
+	    <ul class="navbarContainer">
+		<li class="navBarItems nav-condensedMenu">
+		    <i class="fas fa-bars" id='opensidebttn'></i>
+		    <ul class="navBar-SubmenuContainer" id="sideNav">
+			<li id="closesidebttn" class="Submenu-item closeBTTN fas fa-times"></li>
+			<li class="Submenu-item"><a href="assignments.html">Assignment</a></li>
+			<li class="Submenu-item"><a href="lab.html">Lab</a></li>
+			<li class="Submenu-item"><a href="Lecture.html">Lecture</a></li>
+			<li class="Submenu-item"><a href="resources.html">Resources</a></li>
+			<li class="Submenu-item"><a href="contacts.html">Contact Us</a></li>
+			<li class="Submenu-item"><a href="/logout">Logout</a></li>
+		    </ul> <!-- end of Navbar sub menu -->
+		</li>
+		<li class="navBarItems Middle-Navcontent"><a href='signIn_Index.html'>Home</a></li>
+		<li class="navBarItems"><a href='/profile'>Profile</a></li>
+	    </ul> <!--  end navbar container -->
+	</nav> <!-- end of nav bar section -->
+        
+        <div class='contentHeader'>
+        <div class="overlayHeader"></div>
+	    <div class='HeadText'>
+		<p id='Quote'>All parts should go together without forcing.  You must remember that the parts you are reassembling were disassembled by you.  Therefore, if you can’t get them together again, there must be a reason.  By all means, do not use a hammer.</p>
+		<p id='QAuthor'>- IBM Manual, 1925</p>
+	    </div> <!-- end of quotes section-->
+        </div><!--End of content Header Div-->
+        
+        <div class='InfoContainer'>
+	    <div class="MarkUs InfoSections">
+                <img class= 'markusImg' src='static/images/Figures/gradebook.png' >
+		<div class='MarkUsText'>
+		    <p id='MarkusHeading'> MarkUs</p>
+		    <p id='MarkusBody'>
+		    MarkUs is a web application for the submission and grading of student programming assignments. The primary purpose of MarkUs is to provide TAs with simple tools that will help them to give high quality feedback to students. MarkUs also provides a straight-forward interface for students to submit their work, form groups, and receive feedback. The administrative interface allows instructors to manage groups, organize the grading, and release grades to students.
+		    </p>
+		    <a href='https://markus.utsc.utoronto.ca/cscb20w19'><button class='linkBttn'>Get  My Marks</button></a>
+		</div>
+	    </div> <!-- end of markus section-->
+
+	    <div class="Piazza InfoSections" >
+                <img class= 'PiaImg' src='static/images/Figures/DiscussBoard.png' >
+		<div class='PiaText'>
+		    <p id='PiaHeading'> Piazza</p>
+                    <p id='PiaBody'>
+                        A platform that allows students to connect with other peers, Ta’s and professors. The place to share idea’s and bring up questions about course material.
+                    </p>
+                    <a href='https://piazza.com/class/jr7mjhytaij3jc'><button class="linkBttn piaBTTN">Share My Idea's</button></a>
+		</div>
+	    </div><!-- end of piazza section-->
+            
+	    <div class="Online InfoSections">
+                <p id='OnlineResourcesHeading'> Extra Online Resources</p>
+		    <div class="YoutubeContainer">
+			<a href="https://www.youtube.com"><img class='YoutubeImg' src='static/images/Figures/Youtube-Logo.png' alt='Youtube'></a>
+			<div class='YoutubeText'>
+			    <p id='YoutubeHeading'> Youtube</p>
+			    <p id='YoutubeBody'>
+				A platform with tutorials from many different creators that may help you understand concepts better. Some notable creators include: <a href='https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g', class="Ylink"> Corey Schafer</a>, <a href='https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA', class="Ylink"> Traversy Media</a>, and <a href="https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog/videos", class="Ylink"> Online Tutorials</a>.</p>
+			</div>
+		    </div>
+		    <div class="W3Schools">
+			<a href="https://www.w3schools.com/"><img class='W3schoolImg' src='static/images/Figures/W3-Logo.png' alt='W3 Schools'></a>
+			<div class='W3Text'>
+			    <p id='W3Heading'> W3 Schools </p>
+			    <p id='W3Body'> 
+                            A collection of articles that breakdown that may be helpful to you when get familiar with the different components of web development. The articles can show you some new attributes you may not have known about and will show you how they work and how you can work them into your applications.
+			    </p>
+                    </div>
+                </div>
+            </div><!--end of onliine info section-->
+
+        </div><!-- End of all container section div tag-->
+        
+        <div class='fNote'>
+            <div class='fNoteContent'>
+                <a href='http://web.cs.toronto.edu'> UofT Computer Science Department </a>
+                <p> Site Design by Anshul & George </p>
+            </div><!--footer content div -->
+			<div class='socialButton'>
+				<a href="https://www.facebook.com/UofTCompSci/" class="social fab fa-facebook-f"></a>
+				<a href="https://twitter.com/UofTCompSci?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class=" social fab fa-twitter"></a>
+                <a href='https://www.utoronto.ca' class="social fas fa-university"></a>
+			</div><!-- end of All socialButton div-->
+        </div><!-- end of footer div-->
+        <script type='text/javascript' src="static/Jscripts/submenu.js"></script>
+    </body>
+</html>
