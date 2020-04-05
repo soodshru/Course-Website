@@ -1,6 +1,6 @@
 import sqlite3
 import requests
-from flask import Flask, flash, session, redirect, url_for, escape, request, render_template, g
+from flask import Flask, session, redirect, url_for, escape, request, render_template, g
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import text
 
