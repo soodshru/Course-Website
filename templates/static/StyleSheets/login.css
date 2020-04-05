@@ -1,0 +1,112 @@
+body {
+  margin:0px;
+  border:0px;
+  padding:0px; 
+  background-color: #E9E9E9;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.login_box {
+  background-color: #3D527D;
+  width: 400px;
+  height: 500px;
+  border-style: dashed;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 120px;
+  box-shadow: 10px 10px grey;
+}
+
+.userform {
+  display:flex;
+  flex-direction: column;
+}
+
+.UserInput {
+  width: 110%;
+  height:25px;
+  margin-top: 50px;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.Login_title {
+  font-size: 35px;
+  vertical-align: text-top;
+  align-content: center;
+  margin-top: 10px;
+  flex-direction: column;
+  color: white;
+}
+
+.logBttn {
+  align-self: center;
+  margin-top: 15px;
+  font-size: 30px;
+  border-radius: 0.4rem;
+  box-shadow: 3px 3px 5px 6px #000000;
+}
+
+.loginBox {
+  align-content: center;
+  background-color: #1c3159;
+  margin:0px;
+  border:0px;
+  padding:0px;
+  overflow: hidden;
+  text-align: center;
+  font-family:'Poppins', sans-serif;
+}
+
+.newlink{
+  font-size: 20px;
+  color: white;
+}
+
+input[type=submit] {
+  width:57%;
+  height:50px;
+  font-size:25px;
+  background-color: #333;
+  color: white;
+  align-items: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width : 100%;
+  background-color: #003366;
+  overflow: hidden;
+  min-height: 12vh;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-family:'Poppins', sans-serif;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer a {
+  color: #ACC6E2;
+  padding-top: : 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer p {
+  color: white;
+  font-size: 20px;
+}
