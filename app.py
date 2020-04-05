@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import text
 
 app=Flask(__name__)
-app.secret_key = 'Sood1'
+app.secret_key = 'its_a_secret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///assignment3.db'
 db = SQLAlchemy(app)
 
@@ -29,11 +29,14 @@ def check_data_instructor():
     if request.method == 'POST':
         utorid = str(request.form['LoginID'])
         pw = str(request.form['Password'])
+        # if user is already logged in
         if utorid in session:
             session['utorid'] = utorid
             return render_template('index_i.html')
         else:
+            # only type = instructor can logged in
             sql = """ SELECT * FROM  accounts WHERE type = 'instructor' """
+            # execute sql code
             accs = db.engine.execute(text(sql))
             for acc in accs:
                 if acc['UtorID'] == utorid and acc['Password'] == pw:
@@ -41,7 +44,6 @@ def check_data_instructor():
                     session['name'] = acc['Name']
                     return render_template('index_i.html')
             else:
-                flash("Unidentified Username or Password for Instructor!")
                 return render_template('login_i.html')
 
 
@@ -55,11 +57,14 @@ def check_data_student():
     if request.method == 'POST':
         utorid = str(request.form['LoginID'])
         pw = str(request.form['Password'])
+        # if user is already logged in
         if utorid in session:
             session['utorid'] = utorid
             return render_template('index_s.html')
         else:
+            # only type = student can logged in
             sql = """ SELECT * FROM  accounts WHERE type = 'student' """
+            # execute sql code
             accs = db.engine.execute(text(sql))
             for acc in accs:
                 if acc['UtorID'] == utorid and acc['Password'] == pw:
@@ -72,9 +77,10 @@ def check_data_student():
 
 @app.route('/logout')
 def logout():
-     session.pop('user', None)
-     session.pop('name', None)
-     return redirect('/login.html')
+    # removes user from session
+    session.pop('user', None)
+    session.pop('name', None)
+    return redirect('/login.html')
 
 @app.route('/signup.html')
 def signup():
