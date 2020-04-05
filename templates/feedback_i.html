@@ -39,59 +39,24 @@
 	</div>
 
 	<div class = "main2">
-		
-		<section class="section2">
-			
-
-			<p><strong>Name:</strong></p>
-			<p><strong>Email:</strong></p>
-			
-			<p> <strong>Message: </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
-		</section>
-
-	</div>
-
-	<div class = "main2">
-		
-		<section class="section2">
-			
-
-			<p><strong>Name:</strong></p>
-			<p><strong>Email:</strong></p>
-			
-			<p> <strong>Message: </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
-		
-		</section>
-	
-	</div>
-
-	<div class = "main2">
-		
-		<section class="section2">
-			
-
-			<p><strong>Name:</strong></p>
-			<p><strong>Email:</strong></p>
-			
-			<p> <strong>Message: </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<p>
-		
-		</section>
-	
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Q1</th>
+				<th>Q2</th>
+				<th>Q3</th>
+				<th>Q4</th>
+			</tr>
+			{% for row in feedback %}
+			<tr>
+				<td> {{ row['Name'] }}</td>
+				<td> {{ row['Question1'] }}</td>
+				<td> {{ row['Question2'] }}</td>
+				<td> {{ row['Question3'] }}</td>
+				<td> {{ row['Question4'] }}</td>
+			</tr>
+			{% endfor %}
+		</table>
 	</div>
 
 <div class = "footer">
