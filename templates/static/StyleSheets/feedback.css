@@ -79,14 +79,3 @@ input[type=submit]:hover{
   background-color: #127a8c;
   font-size: 25px;
 }
-
-.footer {
-  background-color: #003366;
-  overflow: hidden;
-  min-height: 12vh;
-  padding-top: 20px;
-  padding-bottom: 5px;
-  font-family:'Poppins', sans-serif;
-  text-align: center;
-  margin-top: 30px;
-}
