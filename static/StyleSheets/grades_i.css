@@ -19,22 +19,22 @@ body {
   text-align: center;
   padding: 21px 23px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .navbar a:hover {
   color: #DA4E35;
-  font-size: 28px;
+  font-size: 19px;
 }
 
-.main1 {
+.title {
   margin-top: 90px;
   background-color: #F1F1F3;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section1 {
+.title_sec {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -42,29 +42,29 @@ body {
   display: block;
 }
 
-.section1 h1 {
+.title_sec h1 {
   color: #127a8c;
   font-size: 50px;
   text-align: center;
   margin:10px;
 }
 
-.main2 {
+.entermark {
   margin-top: 30px;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section2 a {
+.enter_mark a {
   font-size: 20px;
 }
 
-.section2 a:hover{
+.enter_mark a:hover{
   color: #00496a;
   font-weight:bold;
 }
 
-.section2 {
+.enter_mark {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -74,17 +74,17 @@ body {
   background-color: #F1F1F3;
 }
 
-.section2 label{
+.enter_mark label{
   font-size: 20px;
 }
 
-.main2 input[type=text] {
+.entermark input[type=text] {
   padding-top: 7px;
   padding-bottom: 7px;
   font-size: 15px;
 }
 
-.section2 h1 {
+.enter_mark h1 {
   color: #127a8c;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -93,11 +93,11 @@ body {
   border-bottom-color: #B1B1B1;
 }
 
-.main2 textarea {
+.entermark textarea {
   width: 100%;
 }
 
-.main2 input[type=submit]{
+.entermark input[type=submit]{
   margin-bottom: 10px;
   font-size: 20px;
   padding-top: 10px;

@@ -19,22 +19,22 @@ body {
   text-align: center;
   padding: 21px 23px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .navbar a:hover {
   color: #DA4E35;
-  font-size: 28px;
+  font-size: 19px;
 }
 
-.main1 {
+.title {
   margin-top: 90px;
   background-color: #F1F1F3;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section1 {
+.title_sec {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -42,20 +42,20 @@ body {
   display: block;
 }
 
-.section1 h1 {
+.title_sec h1 {
   color: #127a8c;
   font-size: 50px;
   text-align: center;
   margin : 20px;
 }
 
-.main2 {
+.announcement1 {
   margin-top: 30px;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section2 {
+.announcement_1 {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -65,7 +65,7 @@ body {
   background-color: #F1F1F3;
 }
 
-.section2 h1 {
+.announcement_1 h1 {
   color: #127a8c;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -74,19 +74,19 @@ body {
   border-bottom-color: #B1B1B1;
 }
 
-.section2 p {
+.announcement_1 p {
   padding-left: 15px;
   padding-right: 15px;
   font-size: 18px;
 }
 
-.main3 {
+.announcement2 {
   margin-top: 30px;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section3 {
+.announcement_2 {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -96,7 +96,7 @@ body {
   background-color: #F1F1F3;
 }
 
-.section3 h1 {
+.announcement_2 h1 {
   color: #127a8c;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -105,19 +105,19 @@ body {
   border-bottom-color: #B1B1B1;
 }
 
-.section3 p {
+.announcement_2 p {
   padding-left: 15px;
   padding-right: 15px;
   font-size: 18px;
 }
 
-.main4 {
+.announcement3 {
   margin-top: 30px;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section4 {
+.announcement_3 {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -127,7 +127,7 @@ body {
   background-color: #F1F1F3;
 }
 
-.section4 h1 {
+.announcement_3 h1 {
   color: #127a8c;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -136,19 +136,19 @@ body {
   border-bottom-color: #B1B1B1;
 }
 
-.section4 p {
+.announcement_3 p {
   padding-left: 15px;
   padding-right: 15px;
   font-size: 18px;
 }
 
-.main5 {
+.announcement4 {
   margin-top: 30px;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section5 {
+.announcement_4 {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -158,7 +158,7 @@ body {
   background-color: #F1F1F3;
 }
 
-.section5 h1 {
+.announcement_4 h1 {
   color: #127a8c;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -167,19 +167,19 @@ body {
   border-bottom-color: #B1B1B1;
 }
 
-.section5 p {
+.announcement_4 p {
   padding-left: 15px;
   padding-right: 15px;
   font-size: 18px;
 }
 
-.main6 {
+.announcement5 {
   margin-top: 30px;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section6 {
+.announcement_5 {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -189,7 +189,7 @@ body {
   background-color: #F1F1F3;
 }
 
-.section6 h1 {
+.announcement_5 h1 {
   color: #127a8c;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -198,7 +198,7 @@ body {
   border-bottom-color: #B1B1B1;
 }
 
-.section6 p {
+.announcement_5 p {
   padding-left: 15px;
   padding-right: 15px;
   font-size: 18px;

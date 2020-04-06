@@ -19,12 +19,12 @@ body {
   text-align: center;
   padding: 21px 23px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .navbar a:hover {
   color: #DA4E35;
-  font-size: 28px;
+  font-size: 19px;
 }
 
 .navbar a:hover {
@@ -32,14 +32,14 @@ body {
   font-size: 22px;
 }
 
-.main1 {
+.title {
   margin-top: 90px;
   background-color: #F1F1F3;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section1 {
+.title_sec {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -47,20 +47,20 @@ body {
   display: block;
 }
 
-.section1 h1 {
+.title_sec h1 {
   color: #127a8c;
   font-size: 40px;
   text-align: center;
 }
 
-.main2 {
+.course_desc {
   margin-top: 30px;
   background-color: #F1F1F3;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section2 {
+.course_desc_sec {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -68,12 +68,12 @@ body {
   display: block;
 }
 
-.section2 a:hover{
+.course_desc_sec a:hover{
   color: #00496a;
   font-weight:bold;
 }
 
-.section2 h1 {
+.course_desc_sec h1 {
   color: #127a8c;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -82,21 +82,21 @@ body {
   border-bottom-color: #B1B1B1;
 }
 
-.section2 p {
+.course_desc_sec p {
   padding-left: 15px;
   padding-right: 15px;
   font-size: 17px;
 }
 
-.section2 ul {
+.course_desc_sec ul {
   list-style: none;
 }
 
-.section2 li p {
+.course_desc_sec li p {
   font-size: 17px;
 }
 
-.main3 {
+.instructor_info {
   margin-top: 30px;
   background-color: #F1F1F3;
   margin-left: 70px;
@@ -104,7 +104,7 @@ body {
   display: flex;
 }
 
-.section3 {
+.instructor_info_sec {
   display: flex;
   flex-direction: column;
   width : 100%;
@@ -113,7 +113,7 @@ body {
   flex-wrap: nowrap;
 }
 
-.section3 h1 {
+.instructor_info_sec h1 {
   color: #127a8c;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -123,18 +123,18 @@ body {
   margin-bottom: 0px;
 }
 
-.section3 p {
+.instructor_info_sec p {
   padding-left: 15px;
   padding-right: 15px;
   font-size: 17px;
 }
 
-.section3 ul {
+.instructor_info_sec ul {
   list-style: none;
   padding-left: 15px;
 }
 
-.section3 p {
+.instructor_info_sec p {
   font-size: 17px;
   margin-top: 0px;
 }
@@ -145,14 +145,14 @@ body {
   flex-grow: 1;
 }
 
-.main4 {
+.Calendar {
   margin-top: 30px;
   background-color: #F1F1F3;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section4 {
+.Calendar_sec {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -164,7 +164,7 @@ iframe {
   width : -webkit-fill-available;
 }
 
-.section4 h1 {
+.Calendar_sec h1 {
   color: #127a8c;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -173,14 +173,14 @@ iframe {
   border-bottom-color: #B1B1B1;
 }
 
-.main5 {
+.Team {
   margin-top: 30px;
   background-color: #F1F1F3;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section5 {
+.Team_sec {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -189,7 +189,7 @@ iframe {
   flex-direction: column;
 }
 
-.section5 h1 {
+.Team_sec h1 {
   color: #127a8c;
   padding-bottom: 10px;
   padding-left: 15px;

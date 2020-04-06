@@ -90,10 +90,10 @@ def signup():
 @app.route('/createaccform', methods=['GET','POST'])
 def createacc():
     if request.method == 'POST':
-        type = str(request.form[UserType])
-        username = str(request.form[UserName])
-        loginid = str(request.form[LoginID])
-        pw = str(request.form[Password])
+        type = str(request.form.get('Usertype'))
+        username = str(request.form.get('UserName'))
+        loginid = str(request.form.get('LoginID'))
+        pw = str(request.form.get('Password'))
         sql = """" INSERT INTO accounts VALUES ('{}', '{}', '{}', '{}') """.format(type,loginid,username,pw)
         db.engine.execute(text(sql))
         return render_template('login.html')
