@@ -19,22 +19,22 @@ body {
   text-align: center;
   padding: 21px 23px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .navbar a:hover {
   color: #DA4E35;
-  font-size: 28px;
+  font-size: 19px;
 }
 
-.main1 {
+.title {
   margin-top: 90px;
   background-color: #F1F1F3;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section1 {
+.title_sec {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -42,20 +42,20 @@ body {
   display: block;
 }
 
-.section1 h1 {
+.title_sec h1 {
   color: #127a8c;
   font-size: 50px;
   text-align: center;
   margin:10px;
 }
 
-.main2 {
+.lectures {
   margin-top: 30px;
   margin-left: 70px;
   margin-right: 70px;
 }
 
-.section2 {
+.lecture {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -65,7 +65,7 @@ body {
   background-color: #F1F1F3;
 }
 
-.section2 h1 {
+.lecture h1 {
   color: #127a8c;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -74,16 +74,16 @@ body {
   border-bottom-color: #B1B1B1;
 }
 
-.section2 ul {
+.lecture ul {
   list-style: none;
 }
 
-.section2 a:hover{
+.lecture a:hover{
   color: #00496a;
   font-weight:bold;
 }
 
-.section2 li p {
+.lecture li p {
   font-size: 17px;
 }
 

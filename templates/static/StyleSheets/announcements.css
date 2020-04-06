@@ -19,12 +19,12 @@ body {
   text-align: center;
   padding: 21px 23px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .navbar a:hover {
   color: #DA4E35;
-  font-size: 28px;
+  font-size: 19px;
 }
 
 .title {
