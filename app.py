@@ -94,7 +94,7 @@ def createacc():
         username = str(request.form.get('UserName'))
         loginid = str(request.form.get('LoginID'))
         pw = str(request.form.get('Password'))
-        sql = """" INSERT INTO accounts VALUES ('{}', '{}', '{}', '{}') """.format(type,loginid,username,pw)
+        sql = """ INSERT INTO accounts VALUES ('{}', '{}', '{}', '{}') """.format(type,loginid,username,pw)
         db.engine.execute(text(sql))
         return render_template('login.html')
 
