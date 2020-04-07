@@ -11,7 +11,8 @@
 </head>
 
 <body>
-	
+
+
 	<br><br><br><br>
 
 	<div class ="container">
@@ -19,7 +20,7 @@
 		<!-- A form for the user to enter & submit all their information to create an account -->
 		<div class="login_box">
 
-			<form class="userform" action = "createaccform" method="POST">
+			<form id="signup" class="userform" action = "createaccform"  method="POST" >
 
 				<br>
 				
@@ -41,8 +42,7 @@
 				
 				<input type="password" name="Password" class="UserInput" placeholder="Password" required><br><br>
 				
-				<input type="submit" value="Submit" class="logBttn">
-			
+				<input type="submit" onsubmit = "return checkForm();" value="Submit" class="logBttn">
 			</form>
 			
 			<br><br>
@@ -55,7 +55,9 @@
 		
 		<p>Site design by Shruti Sood and Jeevika Baskaran</p>
 	
-	</div>
+	</div>\
+
+	<script type="text/javascript" src="app.js"></script>
 
 </body>
 
