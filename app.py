@@ -12,17 +12,17 @@ db = SQLAlchemy(app)
 @app.route('/')
 def root():
     # tells Flask to render the HTML page called login.html
-	return render_template('login.html')
+    return render_template('login.html')
 
 @app.route('/login.html')
 def login():
     # tells Flask to render the HTML page called login.html
-	return render_template('login.html')
+    return render_template('login.html')
 
 @app.route('/login_i.html')
 def login_i():
     # tells Flask to render the HTML page called login_i.html
-	return render_template('login_i.html')
+    return render_template('login_i.html')
 
 @app.route('/loginforminstructor', methods=['GET','POST'])
 def check_data_instructor():
@@ -50,7 +50,7 @@ def check_data_instructor():
 @app.route('/login_s.html')
 def login_s():
     # tells Flask to render the HTML page called login_s.html
-	return render_template('login_s.html')
+    return render_template('login_s.html')
 
 @app.route('/loginformstudent', methods=['GET','POST'])
 def check_data_student():
@@ -85,7 +85,7 @@ def logout():
 @app.route('/signup.html')
 def signup():
     # tells Flask to render the HTML page called signup.html
-	return render_template('signup.html')
+    return render_template('signup.html')
 
 @app.route('/createaccform', methods=['GET','POST'])
 def createacc():
@@ -96,6 +96,9 @@ def createacc():
         pw = str(request.form.get('Password'))
         sql = """ INSERT INTO accounts VALUES ('{}', '{}', '{}', '{}') """.format(type,loginid,username,pw)
         db.engine.execute(text(sql))
+        if type == 'student':
+            sql = """ INSERT INTO Grades (UtorID)  VALUES ('{}') """.format(loginid)
+            db.engine.execute(text(sql))
         return render_template('login.html')
 
 
@@ -106,7 +109,7 @@ def announcements_i():
         return render_template('login.html')
     else:
         # tells Flask to render the HTML page called /announcements_i.html
-	    return render_template('/announcements_i.html')
+        return render_template('/announcements_i.html')
 
 @app.route('/announcements_s.html')
 def announcements_s():
@@ -115,7 +118,7 @@ def announcements_s():
         return render_template('login.html')
     else:
         # tells Flask to render the HTML page called /announcements_s.html
-	    return render_template('/announcements_s.html')
+        return render_template('/announcements_s.html')
 
 @app.route('/evaluations_i.html')
 def evaluations_i():
@@ -124,7 +127,7 @@ def evaluations_i():
         return render_template('login.html')
     else:
         # tells Flask to render the HTML page called /evaluations_i.html
-	    return render_template('/evaluations_i.html')
+        return render_template('/evaluations_i.html')
 
 @app.route('/evaluations_s.html')
 def evaluations_s():
@@ -133,7 +136,7 @@ def evaluations_s():
         return render_template('login.html')
     else:
         # tells Flask to render the HTML page called /evaluations_s.html
-	    return render_template('/evaluations_s.html')
+        return render_template('/evaluations_s.html')
 
 @app.route('/index_i.html')
 def index_i():
@@ -142,7 +145,7 @@ def index_i():
         return render_template('login.html')
     else:
         # tells Flask to render the HTML page called /index_i.html
-	    return render_template('/index_i.html')
+        return render_template('/index_i.html')
 
 @app.route('/index_s.html')
 def index_s():
@@ -151,7 +154,7 @@ def index_s():
         return render_template('login.html')
     else:
         # tells Flask to render the HTML page called /index_s.html
-	    return render_template('/index_s.html')
+        return render_template('/index_s.html')
 
 @app.route('/labs_i.html')
 def labs_i():
@@ -232,7 +235,24 @@ def grades_i():
         return render_template('login.html')
     else:
         # tells Flask to render the HTML page called /grades_i.html
-        return render_template('/grades_i.html')
+        sql = """ SELECT * FROM Grades """
+        class1 = db.engine.execute(text(sql))
+        return render_template('/grades_i.html', class1 = class1)
+
+@app.route('/EnterGrades', methods=['GET','POST'])
+def Entergrades():
+    if request.method == 'POST':
+        type = str(request.form.get('assgn'))
+        grade = str(request.form.get('grade'))
+        stdid = str(request.form.get('StudentNumber'))
+        sql = """ SELECT * FROM Grades """
+        students = db.engine.execute(text(sql))
+        for stud in students :
+            if stud['UtorID'] == stdid :
+                sql = """ UPDATE Grades SET {} = '{}' WHERE UtorID = '{}' """.format(type, grade, stdid)
+                db.engine.execute(text(sql))
+                return redirect('/grades_i.html')
+        return redirect('/grades_i.html')
 
 @app.route('/grades_s.html')
 def grades_s():
@@ -276,8 +296,11 @@ def regrades_i():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
+        sql = """ SELECT * FROM RemarkRequests """
+        requests = db.engine.execute(text(sql))
         # tells Flask to render the HTML page called regrades_i.html
-        return render_template('regrades_i.html')
+        return render_template('regrades_i.html', requests = requests)
+
 
 if __name__ == '__main__':
-	app.run(debug ="true")
+    app.run(debug = 'True')

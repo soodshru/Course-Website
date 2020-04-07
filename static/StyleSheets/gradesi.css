@@ -26,16 +26,23 @@
   margin-right: 70px;
 }
 
-.enter_mark a {
-  font-size: 20px;
-}
-
-.enter_mark a:hover{
-  color: #00496a;
-  font-weight:bold;
+.allmark {
+  margin-top: 30px;
+  margin-left: 70px;
+  margin-right: 70px;
 }
 
 .enter_mark {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: solid;
+  border-color: #C8C8C8;
+  display: block;
+  border-radius: 20px;
+  background-color: #F1F1F3;
+}
+
+.all_mark {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -64,6 +71,15 @@
   border-bottom-color: #B1B1B1;
 }
 
+.all_mark h1 {
+  color: #127a8c;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  font-size: 30px;
+  border-bottom: solid;
+  border-bottom-color: #B1B1B1;
+}
+
 .entermark textarea {
   width: 100%;
 }
@@ -79,7 +95,43 @@
   background-color: #1DA9C1;
 }
 
-input[type=submit]:hover {
+.Submit {
+  align-self: center;
+  margin-top: 15px;
+  font-size: 30px;
+  border-radius: 0.4rem;
+  box-shadow: 3px 3px 5px 6px #000000;
+}
+
+input[type=submit] {
+  width:15%;
+  height:50px;
+  font-size:25px;
   background-color: #127a8c;
-  font-size: 25px
+  color: white;
+  align-items: center;
+}
+
+input[type=submit]:hover{
+  font-size: 30px;
+}
+
+.assgn {
+  height : 35px;
+  width : 150px;
+  font-size: 17px;
+}
+
+.Heading {
+  overflow: hidden;
+  width: 100%;
+}
+
+.Heading h2 {
+  float: left;
+  text-align: center;
+  padding: 10px 40px;
+  margin-top:0px;
+  text-decoration: none;
+  font-size: 25px;
 }

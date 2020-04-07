@@ -6,7 +6,7 @@
 	
 	<title>Grades</title>
 	
-	<link rel="stylesheet" type="text/css" href="static/StyleSheets/grades_i.css">
+	<link rel="stylesheet" type="text/css" href="static/StyleSheets/gradesi.css">
 	<link rel="stylesheet" type="text/css" href="static/StyleSheets/headerfooter.css">
 
 </head>
@@ -40,19 +40,18 @@
 	
 	</div>
 
+	<br>
+
 	<!-- This section is a form that allows marks to be entered & submitted for every evaluation -->
 	<div class = "entermark">
 	
 		<section class="enter_mark">
-	
-
-			<p><b><a href="allGrades.html" target="_blank">View all Student Grades</a> </b></p>
 
 			<h1> Enter Grades </h1>
 
 			<div class = "formsection">
 	
-				<form>
+				<form action = "EnterGrades" method="POST">
 	
 					<label for = "StudentNumber"><strong>Student Number: </strong></label>
 	
@@ -60,33 +59,23 @@
 	
 					<br> </br>
 	
-					<label for = "Assignment1"><strong>Assignment 1: </strong></label>
-	
-					<input type = "text" id="Assignment1" name = "Assignment1">
-	
-					<br> </br>
+					<select id = "assgn" name = "assgn" class = "assgn">
+			           
+			            <option value = "A1">Assignment 1</option>
+			           
+			            <option value = "A2">Assignment 2</option>
 
-					<label for = "Assignment2"><strong>Assignment 2: </strong></label>
-	
-					<input type = "text" id="Assignment2" name = "Assignment2">
-	
-					<br> </br>
+			            <option value = "A3">Assignment 3</option>
 
-					<label for = "Assignment3"><strong>Assignment 3: </strong></label>
-	
-					<input type = "text" id="Assignment3" name = "Assignment3">
-	
-					<br> </br>
+			            <option value = "Midterm">Midterm</option>
 
-					<label for = "Midterm"><strong>Midterm: </strong></label>
-	
-					<input type = "text" id="Midterm" name = "Midterm">
-	
-					<br> </br>
+			            <option value = "Final">Final</option>
+			           
+			        </select>
 
-					<label for = "Final"><strong>Final: </strong></label>
+			        <label><strong>:</strong></label>
 	
-					<input type = "text" id="Final" name = "Final">
+					<input type = "text" id="grade" name = "grade">
 	
 					<br> </br>
 
@@ -95,13 +84,54 @@
 				</form>
 			
 			</div>
+
+			<br>
 		
 		</section>
 
 	</div>
 
+	<br>
+
+	<div class = "allmark">
 	
+		<section class="all_mark">
+
+			<h1> All Student Grades </h1>
+
+			<div class = "Heading">
+
+				<h2>UtorID</h2>
+				<h2>Assignment 1</h2>
+				<h2>Assignment 2</h2>
+				<h2>Assignment 3</h2>
+				<h2>Midterm</h2>
+				<h2>Final</h2>
+			
+			</div>
+
+			<div>
+				{% for student in class1 : %}
+				<div>
+					<p>{{ student['UtorID'] }}</p>
+					<p>{{ student['A1'] }}</p>
+					<p>{{ student['A2'] }}</p>
+					<p>{{ student['A3'] }}</p>
+					<p>{{ student['Midterm'] }}</p>
+					<p>{{ student['Final'] }}</p> 
+					<br>
+				</div>
+				{% endfor %}
+
+			</div>
+			
+		</section>
+
 	</div>
+	
+	<br><br>
+
+
 	
 	<div class = "footer">
 
