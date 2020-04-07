@@ -31,7 +31,7 @@ def check_data_instructor():
         pw = str(request.form['Password'])
         # if user is already logged in
         if utorid in session:
-            session['utorid'] = utorid
+            session['current_login'] = utorid
             return render_template('index_i.html')
         else:
             # only type = instructor can logged in
@@ -40,7 +40,7 @@ def check_data_instructor():
             accs = db.engine.execute(text(sql))
             for acc in accs:
                 if acc['UtorID'] == utorid and acc['Password'] == pw:
-                    session['user'] = utorid
+                    session['current_login'] = utorid
                     session['name'] = acc['Name']
                     return render_template('index_i.html')
             else:
@@ -59,7 +59,7 @@ def check_data_student():
         pw = str(request.form['Password'])
         # if user is already logged in
         if utorid in session:
-            session['utorid'] = utorid
+            session['current_login'] = utorid
             return render_template('index_s.html')
         else:
             # only type = student can logged in
@@ -241,7 +241,34 @@ def grades_s():
         return render_template('login.html')
     else:
         # tells Flask to render the HTML page called /grades_s.html
-        return render_template('/grades_s.html')
+        Assgn1 = 'TBA'
+        Assgn2 = 'TBA'
+        Assgn3 = 'TBA'
+        TT = 'TBA'
+        Fin = 'TBA'
+        name = 'Unknown'
+        sql = """ SELECT * FROM Grades """
+        grades = db.engine.execute(text(sql))
+        for student in grades:
+            if session['current_login'] == student['UtorID'] :
+                Assgn1 = student['A1']
+                Assgn2 = student['A2']
+                Assgn3 = student['A3']
+                TT = student['Midterm']
+                Fin = student['Final']
+                name = session['name']
+        return render_template('grades_s.html', UserName = name, Ass1 = Assgn1, Ass2 = Assgn2, Ass3 = Assgn3, Mid = TT,
+                               Fi = Fin)
+
+@app.route('/RemarkRequest', methods=['GET','POST'])
+def remarkrequest():
+    if request.method == 'POST':
+        Assgn = str(request.form.get('assgn'))
+        reason = str(request.form.get('Message'))
+        utorid = session['current_login']
+        sql = """ INSERT INTO RemarkRequests VALUES ('{}', '{}', '{}') """.format(utorid, Assgn, reason)
+        db.engine.execute(text(sql))
+        return redirect('/grades_s.html')
 
 @app.route('/regrades_i.html')
 def regrades_i():

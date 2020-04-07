@@ -4,9 +4,9 @@
 
 <head>
 
-	<title>Lectures</title>
+	<title>Grades</title>
 
-	<link rel="stylesheet" type="text/css" href="static/StyleSheets/grades_s.css">
+	<link rel="stylesheet" type="text/css" href="static/StyleSheets/gradesS.css">
 	<link rel="stylesheet" type="text/css" href="static/StyleSheets/headerfooter.css">
 
 </head>
@@ -27,6 +27,96 @@
 		<a href="logout">LOGOUT</a>
 
 	</div>
+
+	<!--This is the title for the page -->
+	<div class = "title">
+		
+		<section class="title_sec">
+		
+			<h1>Grades</h1>
+
+			<p></p>
+
+		</section>
+	
+	</div>
+
+	<div class = "grade">
+
+		<section class="my_grade">
+		
+			<h1>{{UserName}} Grades</h1>
+
+			<h2>Assignment 1 : </h2> {{Ass1}}
+
+			<h2>Assignment 2 : </h2> {{Ass2}}
+
+			<h2>Assignment 3 : </h2> {{Ass3}}
+
+			<h2>Midterm : </h2> {{Mid}}
+
+			<h2>Final : </h2> {{Fi}}
+
+			<br><br>
+
+		</section>
+
+	</div>
+
+	<br>
+	<br>
+
+	<div class = "remark">
+
+		<section class="remark_request">
+		
+			<h1>Remark Request</h1>
+		
+			<p>Please choose the assignment you would like to get remarked and a reason and submit your request. Please give us 2 weeks to process your request. Your new marks (if any changes) would be posted above.</p>
+
+			<br>
+
+			<div class = "formsection">
+		
+				<form action = "RemarkRequest" method = "POST">
+
+					<label for = "Menu">Choose the assignment you are submitting the remark request for:</label>
+		
+					<select id = "assgn" name = "assgn" class = "assgn">
+			           
+			            <option value = "A1">Assignment 1</option>
+			           
+			            <option value = "A2">Assignment 2</option>
+
+			            <option value = "A3">Assignment 3</option>
+
+			            <option value = "Midterm">Midterm</option>
+
+			            <option value = "Final">Final</option>
+			           
+			        </select>
+
+			        <br><br>
+						
+					<label for = "Message">Message: </label><br>
+
+					<textarea id="Message" name = "Message" placeholder = "Reason for your request..."></textarea>
+
+					<br></br>
+
+					<input type="submit" value="Submit" class="subBttn">
+
+				</form>
+				
+			</div>
+				
+			<br>
+		
+		</section>
+
+	</div>
+
+	<br><br>
 
 	<div class = "footer">
 
