@@ -11,7 +11,8 @@
 </head>
 
 <body>
-	
+
+
 	<br><br><br><br>
 
 	<div class ="container">
@@ -19,7 +20,7 @@
 		<!-- A form for the user to enter & submit all their information to create an account -->
 		<div class="login_box">
 
-			<form class="userform" action = "createaccform" method="POST">
+			<form class="userform" action = "createaccform" onsubmit = "checkForm()" method="POST" >
 
 				<br>
 				
@@ -42,7 +43,8 @@
 				<input type="password" name="Password" class="UserInput" placeholder="Password" required><br><br>
 				
 				<input type="submit" value="Submit" class="logBttn">
-			
+
+				<script src="app.js"></script>
 			</form>
 			
 			<br><br>
