@@ -125,13 +125,23 @@ input[type=submit]:hover{
 .Heading {
   overflow: hidden;
   width: 100%;
+  border-bottom: solid;
+  border-bottom-color: #B1B1B1;s
 }
 
 .Heading h2 {
   float: left;
   text-align: center;
   padding: 10px 40px;
+  padding-bottom: 0px;
   margin-top:0px;
   text-decoration: none;
   font-size: 25px;
+}
+
+.stdgrades{
+  padding-top : 10px;
+  padding-bottom: 10px;
+  border-bottom: solid;
+  border-bottom-color: #B1B1B1;
 }

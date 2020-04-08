@@ -47,27 +47,49 @@
 	
 			<h1> Contact us </h1>
 	
-			<p> We would love to hear your feedback. Please send a message anonymously or using your UofT email and we'll get back to you as soon as possible.</p>
+			<p> We would love to hear your feedback. Please send us your feedback anonymously and we'll use it to better ourselves.</p>
+
+			<br>
 
 			<div class = "formsection">
 	
-				<form>
-	
-					<label for = "Fullname"><strong>Full Name: </strong></label>
-	
-					<input type = "text" id="Fullname" name = "Fullname">
-	
-					<br> </br>
+				<form action = "addfeedback" method = "POST">
 
-					<label for = "Email" ><strong>Email: </strong></label>
-	
-					<input type = "text" id="Email" name = "Email">
-	
-					<br></br>
+					<label for = "Menu"><strong>Choose the Instructor you are submitting the remark request for:</strong></label>
+		
+					<select id = "instructor" name = "instructor" class = "instructor">
+			           
+				        {% for instructor in instructors %}
+				           
+				        <option value = "{{ instructor['UtorID'] }}">{{ instructor['Name'] }}</option>
+				           
+				        {% endfor %}
+			       
+			        </select>
 
-					<label for = "Message"><strong>Message: </strong></label>
+			        <br><br>
+	
+					<label for = "q1"><strong>What do you like about the instructor teaching? </strong></label>
+	
+					<input type = "text" id="ans" name = "q1">
+	
+					<br><br>
 
-					<textarea id="Message" name = "Message" style = "height: 80px"></textarea>
+					<label for = "q1" ><strong>What do you recommend the instructor to do to improve their teaching? </strong></label>
+	
+					<input type = "text" id="ans" name = "q2">
+	
+					<br><br>
+
+					<label for = "q3"><strong>What do you like about the labs? </strong></label>
+
+					<textarea type = "text" id="ans" name = "q3"></textarea>
+
+					<br><br>
+
+					<label for = "q4"><strong>What do you recommend the lab instructors to do to improve their lab teaching? </strong></label>
+
+					<textarea type = "text" id="ans" name = "q4"></textarea>
 
 					<br></br>
 
@@ -82,6 +104,8 @@
 	</section>
 
 </div>
+
+<br><br>
 
 <div class = "footer">
 	

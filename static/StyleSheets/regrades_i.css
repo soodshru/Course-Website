@@ -26,11 +26,6 @@
   margin-right: 70px;
 }
 
-.request a:hover{
-  color: #00496a;
-  font-weight:bold;
-}
-
 .request {
   padding-left: 10px;
   padding-right: 10px;
@@ -56,28 +51,4 @@
 
 .request li {
   font-size: 17px;
-}
-
-.resolve {
-  align-self: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  font-size: 10px;
-  border-radius: 0.4rem;
-  box-shadow: 3px 3px 5px 6px #000000;
-}
-
-input[type=submit] {
-  width:100px;
-  height:30px;
-  font-size:12px;
-  background-color: #127a8c;
-  color: white;
-  align-items: center;
-}
-
-input[type=submit]:hover{
-  font-size: 15px;
 }

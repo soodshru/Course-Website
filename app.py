@@ -1,6 +1,6 @@
 import sqlite3
 import requests
-from flask import Flask, session, redirect, url_for, escape, request, render_template, g
+from flask import Flask, session, redirect, request, render_template, g
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import text
 
@@ -198,8 +198,10 @@ def feedback_i():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
+        sql = """ SELECT * FROM Feedback WHERE UtorID = '{}' """.format(session['current_login'])
+        feedbacks = db.engine.execute(text(sql))
         # tells Flask to render the HTML page called /feedback_i.html
-        return render_template('/feedback_i.html')
+        return render_template('/feedback_i.html', feedbacks = feedbacks)
 
 @app.route('/feedback_s.html')
 def feedback_s():
@@ -207,8 +209,22 @@ def feedback_s():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
+        sql = """ SELECT UtorID,Name FROM accounts WHERE type = 'instructor' """
+        instructors = db.engine.execute(text(sql))
         # tells Flask to render the HTML page called /feedback_s.html
-        return render_template('/feedback_s.html')
+        return render_template('/feedback_s.html', instructors = instructors)
+
+@app.route('/addfeedback', methods=['GET','POST'])
+def addFeedback():
+    if request.method == 'POST':
+        inst = str(request.form.get('instructor'))
+        a1 = str(request.form.get('q1'))
+        a2 = str(request.form.get('q2'))
+        a3 = str(request.form.get('q3'))
+        a4 = str(request.form.get('q4'))
+        sql = """ INSERT INTO Feedback VALUES('{}','{}', '{}', '{}', '{}') """.format(inst, a1, a2, a3, a4)
+        db.engine.execute(text(sql))
+        return redirect('/feedback_s.html')
 
 @app.route('/resources_i.html')
 def resources_i():

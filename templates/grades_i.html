@@ -110,9 +110,10 @@
 			
 			</div>
 
-			<div>
+			<div class = "stdgrades">
 				{% for student in class1 : %}
-				<div>
+				<div class = "stdgrades">
+
 					<p>{{ student['UtorID'] }}</p>
 					<p>{{ student['A1'] }}</p>
 					<p>{{ student['A2'] }}</p>
@@ -120,6 +121,7 @@
 					<p>{{ student['Midterm'] }}</p>
 					<p>{{ student['Final'] }}</p> 
 					<br>
+					
 				</div>
 				{% endfor %}
 
