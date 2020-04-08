@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remark Requests</title>
+</head>
+<body>
+	<br><br><br>
+	<div>
+		 <table border="1">
+		 	<thead>
+		 		<td>UtorID</td>
+		 		<td>Remark 1</td>
+		 		<td>Reason 2</td>
+		 	</thead>
+		 	{% for row in rows %}
+		 		<tr>
+		 			<td>{{ row["utorid"] }}</td>
+		 			<td>{{ row["remark"] }}</td>
+		 			<td>{{ row["comment"] }}</td>
+		 		</tr>
+		 	{% endfor %}
+		 </table>
+
+		</div>
+
+		<p>Navigate Back to See All Options For Instructor</p>
+
+</body>
+</html>

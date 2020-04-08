@@ -6,7 +6,7 @@
 	
 	<title>Grades</title>
 	
-	<link rel="stylesheet" type="text/css" href="static/StyleSheets/gradesi.css">
+	<link rel="stylesheet" type="text/css" href="static/StyleSheets/gradesii.css">
 	<link rel="stylesheet" type="text/css" href="static/StyleSheets/headerfooter.css">
 
 </head>
@@ -101,31 +101,27 @@
 
 			<div class = "Heading">
 
-				<h2>UtorID</h2>
-				<h2>Assignment 1</h2>
-				<h2>Assignment 2</h2>
-				<h2>Assignment 3</h2>
-				<h2>Midterm</h2>
-				<h2>Final</h2>
+				<h2 class = "item1">UtorID</h2>
+				<h2 class = "item2">Assignment 1</h2>
+				<h2 class = "item3">Assignment 2</h2>
+				<h2 class = "item4">Assignment 3</h2>
+				<h2 class = "item5">Midterm</h2>
+				<h2 class = "item6">Final</h2>
 			
 			</div>
 
+			{% for student in class1 : %}
 			<div class = "stdgrades">
-				{% for student in class1 : %}
-				<div class = "stdgrades">
 
-					<p>{{ student['UtorID'] }}</p>
-					<p>{{ student['A1'] }}</p>
-					<p>{{ student['A2'] }}</p>
-					<p>{{ student['A3'] }}</p>
-					<p>{{ student['Midterm'] }}</p>
-					<p>{{ student['Final'] }}</p> 
-					<br>
-					
-				</div>
-				{% endfor %}
-
+				<p class = "item1">{{ student['UtorID'] }}</p>
+				<p class = "item2">{{ student['A1'] }}</p>
+				<p class = "item3">{{ student['A2'] }}</p>
+				<p class = "item4">{{ student['A3'] }}</p>
+				<p class = "item5">{{ student['Midterm'] }}</p>
+				<p class = "item6">{{ student['Final'] }}</p> 
+			
 			</div>
+			{% endfor %}
 			
 		</section>
 
@@ -133,8 +129,6 @@
 	
 	<br><br>
 
-
-	
 	<div class = "footer">
 
 		<a href="https://web.cs.toronto.edu/" target="_blank">Faculty of Computer Science at UofT</a>

@@ -123,25 +123,37 @@ input[type=submit]:hover{
 }
 
 .Heading {
+  display: grid;
   overflow: hidden;
   width: 100%;
   border-bottom: solid;
-  border-bottom-color: #B1B1B1;s
+  border-bottom-color: #B1B1B1;
+}
+
+.stdgrades{
+  display:grid;
+  overflow: hidden;
+  width: 100%;
+  border-bottom: solid;
+  border-bottom-color: #B1B1B1;
+}
+
+.stdgrades p {
+  font-size: 20px;
+  float: left;
+  text-align: center;
+  padding: 5px 40px;
+  padding-bottom: 0px;
+  margin-top:0px;
+  text-decoration: none;
 }
 
 .Heading h2 {
   float: left;
   text-align: center;
-  padding: 10px 40px;
+  padding: 5px 40px;
   padding-bottom: 0px;
   margin-top:0px;
   text-decoration: none;
   font-size: 25px;
-}
-
-.stdgrades{
-  padding-top : 10px;
-  padding-bottom: 10px;
-  border-bottom: solid;
-  border-bottom-color: #B1B1B1;
 }

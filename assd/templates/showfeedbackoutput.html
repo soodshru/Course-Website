@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Feedback</title>
+</head>
+<body>
+	<br><br><br>
+	<div>
+		 <table border="1">
+		 	<thead>
+		 		<td>Instructor</td>
+		 		<td>Question 1</td>
+		 		<td>Question 2</td>
+		 		<td>Question 3</td>
+		 		<td>Question 4</td>
+		 		<td>Question 5/td>
+		 	</thead>
+		 	{% for row in rows %}
+		 		<tr>
+		 			<td>{{ row["instructor"] }}</td>
+		 			<td>{{ row["q1"] }}</td>
+		 			<td>{{ row["q2"] }}</td>
+		 			<td>{{ row["q3"] }}</td>
+		 			<td>{{ row["q4"] }}</td>
+		 			<td>{{ row["q5"] }}</td>
+		 		</tr>
+		 	{% endfor %}
+		 </table>
+
+		</div>
+
+		<p>Navigate Back to See All Options For Instructor</p>
+
+</body>
+</html>

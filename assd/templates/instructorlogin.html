@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome {{ user }}</title>
+</head>
+<body>
+	<br>
+	<br>
+	<form action="{{ url_for("showclassgrades") }}" method="POST">
+		<div>
+			<h3>
+				To View Class Grades Press: 
+			</h3>
+		</div>
+		<input type="submit" name="classgrades" value="Show Grades" />
+	</form>	
+	<br>
+	<form action="{{ url_for("showfeedback") }}" method="POST">
+		<div>
+			<h3>
+				To View Anonymous Feedback Press: 
+			</h3>
+		</div>
+		<input type="submit" name="feedback" value="Show Grades" />
+	</form>	
+	<br>
+	<form action="{{ url_for("showremarkrequests") }}" method="POST">
+		<div>
+			<h3>
+				To See All Remarking Requests Press:
+			</h3>
+		</div>
+		<input type="submit" name="remarks" value="Show Grades" />
+	</form>	
+	<br>
+	<h4><a href="inputmarks.html" target="_blank">To Input Student Marks</a></h4>
+	<br>
+
+</body>
+</html>

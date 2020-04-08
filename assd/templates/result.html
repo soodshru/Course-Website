@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registered/Not Registered</title>
+</head>
+<body>
+       
+       <br>
+       {% if success == 1 %}
+       		<h4> Welcome {{ user }}, You are now registered. <a href="/">Log in again here</a>  </h4>
+       
+       {% else %}
+       		<h4>Could Not Register. You are alreasy registered<a href="/">Log In Here.</a></h4>
+
+       {% endif %}
+
+
+       
+</body>
+</html>

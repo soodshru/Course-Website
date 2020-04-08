@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Give Feedback</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<td>Instructors</td>
+		</thead>
+		{% for row in rows %}
+			<tr>
+				<td>{{ row["instructor"] }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<br>
+	<br>
+	<form action="{{ url_for('sendfeedback2') }}" method="POST">
+			<label for="instructor">Instructor</label>
+			<input type="text" name="instructor" value="Instructor Name">
+			<br>
+			<label for="q1">What do you like about the instructor teaching ?</label> <br>
+			<textarea name = "q1" cols="200" rows="8"> </textarea><br>
+			<br>
+			<label for="q1">What do you recommend the instructor to do to improve their teaching?</label> <br>
+			<textarea name = "q2" cols="200" rows="8"> </textarea><br>
+			<br>
+			<label for="q1">What do you like about the labs?</label> <br>
+			<textarea name = "q3" cols="200" rows="8"> </textarea><br>
+			<br>
+			<label for="q1">What do you recommend the lab instructors to do to improve their lab teaching?</label> <br>
+			<textarea name = "q4" cols="200" rows="8"> </textarea><br>
+			<br>
+			<label for="q1">Any Other Comments</label> <br>
+			<textarea name = "q5" cols="200" rows="8"> </textarea><br>
+			<input type="submit" name="submit" value="Submit Feedback" />
+	</form>
+
+</body>
+</html>

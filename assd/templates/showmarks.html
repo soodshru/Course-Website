@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	 {% for row in rows %}
+		<br><br>
+		<h4>Labs : {{ row['labs'] }}</h4><br>
+		<h4>Assignment 1 : {{ row['assignment1'] }}</h4><br>
+		<h4>Assignment 2 : {{ row['assignment2'] }}</h4><br>
+		<h4>Assignment 3 : {{ row['assignment3'] }}</h4><br>
+		<h4>Midterm Exam : {{ row['midterm'] }}</h4><br>
+		<h4>Final Exam : {{ row['finalmark'] }}</h4><br>
+	{% endfor %}
+
+		<form action="{{ url_for('remarkrequest') }}" method="POST">
+			<label for="remark"> Select Option to Send Remarking Request and Provide a Valid Reason: </label>
+			
+			<br>
+			<input type="radio" name="remark" value="labs" /> Labs
+			<input type="radio" name="remark" value="assignment1" /> Assignment 1
+			<input type="radio" name="remark" value="assignment2" /> Assignment 2
+			<input type="radio" name="remark" value="assignment3" /> Assignment 3
+			<input type="radio" name="remark" value="midterm" /> Midterm
+			<input type="radio" name="remark" value="final" /> Final 
+			<br>
+			<textarea name='reason' cols="50" rows="10">Type Reason Here....</textarea><br>
+			<input type="text" name="utorid" placeholder="Enter Utorid Here" />
+			<input type="submit" name="request" value="Request" />
+		</form>
+</body>
+</html>
