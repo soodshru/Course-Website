@@ -1,0 +1,165 @@
+.mainContainer{
+    background-color: #ffffff;
+    width:100%;
+    height:1700px;
+    padding:100px;
+    
+}
+
+.gradesDisplayContainer{
+    background-color: #424B5C;
+    width:100%;
+    min-width:500px;
+    height:1000px;
+    box-shadow: 0px 0px 50px;
+    align-items: center;
+    
+    
+}
+
+.controls{
+    width:100%;
+    text-align: center;
+    display: inline-block;
+}
+
+.controlbttn{
+    display: inline-block;
+    margin: 20px;
+    padding: 15px 20px;
+    font-size: 20px;
+    border: none;
+    background-color: #192C4B;
+    border-radius: 30px 30px 30px 30px;
+    color: white;
+}
+
+.gradesTable{
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    text-align: justify;
+    text-align-last: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.ID{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.Category{
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.Date{
+    grid-column-start: 8;
+    grid-column-end: 10;
+}
+
+.Grade{
+    grid-column-start: 11;
+    grid-column-end: 13;
+}
+
+
+#GradesHeader{
+    text-decoration: underline;
+    text-align: center;
+    grid-column-start: 5;
+    grid-column-end: 9;
+    width: 100%;
+}
+
+.SectionCollapsible{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 35px;
+    grid-column-start: 1;
+    grid-column-end: 13;
+}
+
+.CollapsibleContent{
+    display: none;
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 13;
+
+}
+
+.QuizContent, .AssignContent, .MidtermContent, .FinalContent{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+}
+
+.GradeContent{
+    display: inline-block;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.ModalWindow{
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
+    transition:0.2 ease;
+}
+
+
+.RequestItemsCon{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 50px;
+    border: 1px solid #888;
+    width: 80%;
+    height:70%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    overflow:auto;
+}
+
+.Request__items{
+/*    flex:0 1 40px;*/
+    width:600px;
+    min-width:200px;
+    margin-top:10px;
+    font-size:50px;
+    text-align:center
+
+}
+
+.Request__submitBTTN{
+    border:none;
+    background-color:#424B5C;
+    font-size:30px;
+    color:white;
+    padding:10px;
+    border-radius:5px;
+    margin:30px;
+    flex-basis:20px;
+    align-self:flex-end;
+    
+}
+
+.Feedback_Items{
+    display: inline-block;
+}
+

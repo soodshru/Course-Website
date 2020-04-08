@@ -1,0 +1,103 @@
+body{
+    overflow-x: hidden;
+}
+
+.mainContainer{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    background-color:#192C4B;
+    margin:70px 68px 100px 68px;
+    height:80vh;
+    box-shadow: 0px 0px 45px;
+    border-radius: 48px;
+   
+}
+
+.messageContainer{
+    flex:1 2 300px;
+    background-color: #fff;
+    border-radius: 48px 0px 0px 48px;
+    height:100%;
+    padding:78px 48px 78px 48px;
+    overflow:hidden;
+}
+
+.SignMesssage{
+    
+/*    font-size:17px;*/
+    font-size:2rem;
+    text-align: left;
+    margin:0px 0px 48px 20px;
+}
+
+.userContainer{
+    
+    flex:2 1 700px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    position: relative;
+    
+    
+}
+
+.Coat-arms{
+    width:25%;
+    height:28%;
+    align-self: flex-start;
+    position:absolute;
+    left:20px;
+    padding:20px;
+    margin:10px; 
+}
+
+.userForm{
+    
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center; 
+    
+}
+
+#box-header{
+    color:white;
+    font-size: 60px;
+}
+
+.userInput{
+    border:none;
+    text-align:center;
+    height:60px;
+    max-width: 662px;
+    font-size:50px;
+    margin:40px;
+    font-family:Helvetica Neue, san-serif, serif;
+    font-weight: lighter;
+    
+}
+
+.logBttn{
+    border:none;
+    width:40%;
+    height:10%;
+    background-color: #6B6D7E;
+    opacity:0.33;
+    font-size:40px;
+    padding:10px 20px 10px 20px;
+    font-family:Helvetica Neue, san-serif, serif;
+    font-weight: lighter;
+    
+    
+}
+
+.logBttn:hover{
+    opacity:1;
+}
+
+#Wrong{
+    font-size: 20px;
+    color:red;
+}

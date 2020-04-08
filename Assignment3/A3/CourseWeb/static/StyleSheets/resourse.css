@@ -1,0 +1,248 @@
+.contentHeader{
+    background-image:url('../images/contentHeader/ICBack.jpg');
+	display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows:repeat(5, 1fr);
+	align-items:center;
+	justify-content:center;
+    height:900px;
+	
+
+}
+
+.overlayHeader{
+    background-color:#686F7E;
+    height:650px;
+    grid-row: 1/ 5;
+    grid-column:2/ span 3;
+    z-index: 1;
+    opacity:0.58;
+    border:none;
+    border-radius: 30px;
+}
+
+.HeadText{
+    grid-row: 1/span 2;
+    grid-column:4/ span 1;
+    width:1200px;
+    height:50%;
+    border:none;
+    z-index: 2;
+}
+
+.HeadText #Quote{
+	font-size:50px;
+	font-weight:bold;
+	color:white;
+	font-style: oblique;
+	width:70%;
+	text-align:center;
+    border:none;
+    opacity:1;
+    
+}
+#Quote::before{
+	content:open-quote;
+	font-size:70px;
+	font-family:lato;
+	color:#EAEAEA;
+}
+
+#Quote::after{
+	content:close-quote;
+	font-size:70px;
+	color:#EAEAEA;
+}
+
+ #QAuthor{
+	font-size:40px;
+	font-weight:bold;
+	font-style:italic;
+	color:white;
+    text-align: center;
+	
+}
+
+
+/*container for three colulms*/
+.InfoContainer{
+	height:2200px;
+	display:flex;
+	flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* css that is applied to all three at the same time*/
+.InfoSections{
+	width:100%;
+/*    padding:100px 0px 100px 100px;*/
+/*	border:1px solid red;   Remove this when done*/
+	
+}
+
+
+.MarkUs {
+	flex:1;
+	display:flex;
+	flex-direction:row;
+    order:1;
+    
+}
+
+.MarkUsText {
+	flex:1;
+    text-align: center;
+    padding:30px 50px 30px 30px;
+    margin-top:40px;
+    border:none;
+    
+}
+
+#MarkusHeading{
+    flex:1;
+    font-family:lato;
+    font-size: 130px;
+    font-style:italic;
+    font-weight: bold;
+    
+}
+#MarkusBody{
+    font-size:30px;
+    text-align:justify;
+
+}
+
+.markusImg{
+	flex:1;
+	width:22%;
+    
+}
+
+.Piazza{
+    flex:1;
+	display:flex;
+	flex-direction:row;
+    background-color:#CBD3D6;
+    order:2;
+	align-items:center;
+}
+
+.PiaText {
+	flex:1;
+    text-align: center;
+    border:none;
+    padding:20px 40px 20px 40px;
+    
+}
+
+#PiaHeading{
+    flex:1;
+    font-family:lato;
+    font-size: 130px;
+    font-style:italic;
+    font-weight: bold;
+    
+}
+#PiaBody{
+    font-size:30px;
+    text-align:center;
+    line-height: 1.5;
+
+    
+}
+
+.PiaImg{
+	flex:1;
+	width:22%;
+    order:1;
+    
+}
+
+.Online{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    border:none;
+    order:3;
+}
+
+#OnlineResourcesHeading{
+    font-family:lato;
+    font-size: 130px;
+    font-weight: bold;
+    vertical-align:top;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.YoutubeImg{
+    flex:1;
+    width:22%;
+    order:1;
+    float:left;
+    margin: 10px;
+}
+
+.YoutubeText{
+    font-size:30px;
+    text-align:left;
+    line-height: 1.5;
+    margin: 10px;
+}
+
+#YoutubeHeading{
+    font-weight: bold;
+}
+
+.W3schoolImg{
+    flex:1;
+    width:20%;
+    order:1;
+    float: right;
+    margin: 10px;
+}
+
+.W3Text{
+    font-size:30px;
+    text-align:left;
+    line-height: 1.5;
+    margin: 10px;
+}
+
+#W3Heading{
+    font-weight: bold;
+}
+
+.Ylink{
+    color:blue;
+}
+
+
+.linkBttn{
+    background-color: white;
+    color:#C9D1D4;
+    border:none;
+    padding:0px 0px;
+    text-align:center;
+    text-decoration: none;
+    font-size:30px;
+    font-weight: bold;
+    -webkit-transition-duration:400ms;
+    transition-duration: 400ms;
+    cursor:pointer;
+    width:40%;
+    border-radius: 10px;
+    margin-top:40px;
+    opacity:0.5;
+    display:inline-block;
+}
+
+
+.linkBttn:hover {
+    background-color:#e7e7e7;
+    color: black; 
+    opacity:1;
+}
+
+

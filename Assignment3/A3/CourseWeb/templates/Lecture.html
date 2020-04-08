@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport'  content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' type='text/css' href="static/StyleSheets/Basiclayout.css">
+	<link rel="stylesheet" type='text/css' href="static/StyleSheets/courseContent.css">
+        <link rel='stylesheet' type='text/css' href="static/fonts/fontawesome/css/all.css">
+        <title>Lecture</title>
+    </head>
+    <body id="main">
+        <nav>
+	    <ul class="navbarContainer">
+		<li class="navBarItems nav-condensedMenu">
+		    <i class="fas fa-bars" id='opensidebttn'></i>
+		    <ul class="navBar-SubmenuContainer" id="sideNav">
+			<li id="closesidebttn" class="Submenu-item closeBTTN fas fa-times"></li>
+			<li class="Submenu-item"><a href="assignments.html">Assignment</a></li>
+			<li class="Submenu-item"><a href="lab.html">Lab</a></li>
+			<li class="Submenu-item"><a href="Lecture.html">Lecture</a></li>
+			<li class="Submenu-item"><a href="resources.html">Resources</a></li>
+			<li class="Submenu-item"><a href="contacts.html">Contact Us</a></li>
+            <li class="Submenu-item"><a href="/logout">Logout</a></li>
+		    </ul> <!-- end of Navbar sub menu -->
+		</li>
+		<li class="navBarItems Middle-Navcontent"><a href='signIn_Index.html'>Home</a></li>
+		<li class="navBarItems"><a href='/profile'>Profile</a></li>
+	    </ul> <!--  end navbar container -->
+	</nav> <!-- end of nav bar section -->
+
+        <div class='contentHeader'>
+            <div class='quoteContainer'>
+                <p id='quote'>
+                    A designer knows he has achieved perfection not when there is nothing left to add, but when there is nothing left to take away
+                </p>
+            </div><!-- End of quoute contanair div-->
+            <a href ="#scrolled "><button class="DownBTTN fas fa-chevron-down"></button></a>
+        </div><!--End of content Header Div-->
+        
+        <div class='MainContentWrapper'>
+            <div class="contentContainer" id="scrolled">
+                <div class="item-container">
+                    <p id='item__title'>Week1- Introduction, Database Background</p>
+                    <a class="download-items" href='static/Content/Lecture/w1_handout.pdf' target='_blank'>Lecture PowerPoint</a>
+                    <a class="download-items" href='static/Content/Lecture/worksheet/w1_handout.pdf' target='_blank'>Work Sheet</a>
+                </div>
+                <div class="item-container">
+                    <p id='item__title'>Week3- Schema Diagrams, Relational Algebra</p>
+                    <a class="download-items" href='static/Content/Lecture/w2.pdf' target='_blank'>Lecture PowerPoint</a>
+                    <a class="download-items" href='static/Content/Lecture/worksheet/schema_relational_algebra.pdf' target='_blank'>Work Sheet</a>
+                    <a class="download-items" href='static/Content/Lecture/worksheet/Solutions/schema_relational_algebra_soln.pdf' target='_blank'>Solutions</a>
+                </div>
+                <div class="item-container">
+                    <p id='item__title'>Week4- SQL and MySQL</p>
+                    <a class="download-items" href='static/Content/Lecture/w3.pdf' target='_blank'>Lecture PowerPoint</a>
+                    <a class="download-items" href='static/Content/Lecture/worksheet/mysql_intro.pdf' target='_blank'>Work Sheet</a>
+                </div>
+                <div class="item-container">
+                    <p id='item__title'>Week5- MySQL Queries, Creating and Editing Tables</p>
+                    <a class="download-items" href='static/Content/Lecture/w4.pdf' target='_blank'>Lecture PowerPoint</a>
+                    <a class="download-items" href='static/Content/Lecture/worksheet/more_mysql.pdf' target='_blank'>Work Sheet</a>
+                    <a class="download-items" href='static/Content/Lecture/worksheet/schema_relational_algebra_soln.pdf' target='_blank'>Solutions</a>
+                </div>
+                <div class="item-container">
+                    <p id='item__title'>Week6- MySQL Outer Joins, Views, NULL, string functions, HTML</p>
+                    <a class="download-items" href='static/Content/Lecture/w5.pdf' target='_blank'>Lecture PowerPoint</a>
+                    <a class="download-items" href='static/Content/Lecture/worksheet/mysql_views.pdf' target='_blank'>Work Sheet</a>
+                    <a class="download-items" href='static/Content/Lecture/worksheet/Solutions/mysql_views.pdf' target='_blank'>Solutions</a>
+                </div>
+                <div class="item-container">
+                    <p id='item__title'>Week7- HTML, CSS</p>
+                    <a class="download-items" href='static/Content/Lecture/w7.pdf' target='_blank'>Lecture PowerPoint</a>
+                </div>
+                <div class="item-container">
+                    <p id='item__title'>Week8- PHP</p>
+                    <a class="download-items" href='static/Content/Lecture/w8_php.pdf' target='_blank'>Lecture PowerPoint</a>
+                </div>
+                <div class="item-container">
+                    <p id='item__title'>Week9- PHP and SQL</p>
+                    <a class="download-items" href='static/Content/Lecture/w8_php.pdf' target='_blank'>Lecture PowerPoint</a>
+                </div>
+                <div class="item-container">
+                    <p id='item__title'>Week10- JavaScript and jQuery</p>
+                    <a class="download-items" href='static/Content/Lecture/jquery.pdf' target='_blank'>Lecture PowerPoint</a>
+                </div>
+                <div class="item-container">
+                    <p id='item__title'>Week11- jQuery, AJAX, JSON</p>
+                    <a class="download-items" href='static/Content/Lecture/week11_forms.pdf' target='_blank'>Lecture PowerPoint</a>
+                </div>
+            </div><!-- End of lec container-->
+
+        </div><!-- End of infoContainer div tag-->
+        
+        <div class='fNote'>
+            <div class='fNoteContent'>
+                <a href='http://web.cs.toronto.edu'> UofT Computer Science Department </a>
+                <p> Site Design by Anshul & George </p>
+            </div><!--footer content div -->
+			<div class='socialButton'>
+				<a href="https://www.facebook.com/UofTCompSci/" class="social fab fa-facebook-f"></a>
+				<a href="https://twitter.com/UofTCompSci?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class=" social fab fa-twitter"></a>
+                <a href='https://www.utoronto.ca' class="social fas fa-university"></a>
+			</div><!-- end of All socialButton div-->
+        </div><!-- end of footer div-->
+        
+        <script type='text/javascript' src="static/Jscripts/submenu.js"></script>
+    </body>
+</html>

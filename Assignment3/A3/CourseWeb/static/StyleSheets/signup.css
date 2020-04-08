@@ -1,0 +1,23 @@
+.mainContainer{
+    height:120vh;
+}
+
+
+.userType{
+    border:none;
+    text-align:center;
+    height:60px;
+    max-width: 662px;
+    font-size:50px;
+    margin:40px;
+    font-family:Helvetica Neue, san-serif, serif;
+    font-weight: lighter;
+	font-size:30px;
+    
+}
+
+.accountType {
+	font-family:Srisakdi, lato;
+	font-size:20px;
+	text-align:center;
+}

@@ -1,0 +1,86 @@
+.mainContainer{
+    background-color: #ffffff;
+    width:100%;
+    height:1700px;
+    padding:100px;
+    
+}
+
+.profileDisplayContainer{
+    background-color: #424B5C;
+    width:100%;
+    min-width:500px;
+    height:560px;
+    box-shadow: 0px 0px 50px;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    justify-items:center;
+    align-items: center;
+    
+}
+
+.Profile-img{
+    grid-column: 5/9;
+    grid-row:2/5;
+    border-radius:50%;
+    width:300px;
+    height:300px;
+}
+
+.displayInfo-header{
+    grid-column:5/9;
+    grid-row:2/6;
+    font-family:Helvetica Neue, san-serif, serif;
+    font-weight: lighter;
+    color:white;
+    font-size: 40px;
+    text-align: center;
+    z-index: 2;
+    
+}
+
+.displayInfo-window{
+    grid-column:5/9;
+    grid-row:3/5;
+    width:300px;
+    height:150px;
+    border-bottom-left-radius:300px;
+    border-bottom-right-radius:300px;
+    background-color:#0A1D52;
+    opacity:0.45;
+    z-index: 1;
+    
+}
+
+.instructorControls{
+    grid-column:1/6;
+    grid-row:2/5;
+    background-color:#9599a2;
+    width: 250px;
+    height: 300px;
+    }
+    
+.control-items{
+    font-size:30px;
+    text-align:center;
+    margin-top:30px;
+    font-weight:medium;
+    
+}
+
+button{
+    background-color:#9599a2;
+    text-align: center;
+    border:none;
+    width: 250px;
+    color: blue;
+}
+    
+.instructorControls2{
+    grid-column:8/20;
+    grid-row:2/5;
+    background-color:#9599a2;
+    width: 250px;
+    height: 300px;
+    }

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport'  content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' type='text/css' href="static/StyleSheets/Basiclayout.css">
+        <link rel='stylesheet' type='text/css' href="static/fonts/fontawesome/css/all.css">
+        <link rel='stylesheet' type='text/css' href="static/StyleSheets/profile.css">
+		<link rel='stylesheet' type='text/css' href="static/StyleSheets/studentpro.css">
+        <title>Profile</title>
+    </head>
+    <body id="main">
+        <nav>
+			<ul class="navbarContainer">
+				<li class="navBarItems nav-condensedMenu">
+					<i class="fas fa-bars" id='opensidebttn'></i>
+					<ul class="navBar-SubmenuContainer" id="sideNav">
+						<li id="closesidebttn" class="Submenu-item closeBTTN fas fa-times"></li>
+						<li class="Submenu-item"><a href="assignments.html">Assignment</a></li>
+						<li class="Submenu-item"><a href="lab.html">Lab</a></li>
+						<li class="Submenu-item"><a href="Lecture.html">Lecture</a></li>
+						<li class="Submenu-item"><a href="resources.html">Resources</a></li>
+						<li class="Submenu-item"><a href="contacts.html">Contact Us</a></li>
+                        <li class="Submenu-item"><a href="/logout">Logout</a></li>
+					</ul> <!-- end of Navbar sub menu -->
+				</li>
+				<li class="navBarItems Middle-Navcontent"><a href='signIn_Index`.html'>Home</a></li>
+				<li class="navBarItems"><a href='/profile'>Profile</a></li>
+			</ul> <!--  end navbar container -->
+		</nav> <!-- end of nav bar section -->
+        
+        <div class="mainContainer">
+            <div class="profileDisplayContainer">
+                <img src='static/images/Miscellaneous/Unknown-person.gif' class="Profile-img" >
+                <h2 class="displayInfo-header" id="display-Name">{{DisplayName}}</h2>
+                <div class="displayInfo-window"></div>
+            </div> <!--end of profile display container-->
+            
+            <div class="gradeDisplayContainer">
+                <p>My Grades</p>
+                <button class="RemarkBttn" id="remarkRequest">Remark Request</button>
+                <div class="Assessment">
+                    <p class="Assessment__text columns">Quiz 1</p>
+                    <p class="Assessment__text columns" name="Quiz1Grade">{{Quiz1Grade}}</p>
+                </div>
+                <div class="Assessment">
+                    <p class="Assessment__text columns">Quiz 2</p>
+                    <p class="Assessment__text columns" >{{Quiz2Grade}}</p>
+                </div>
+                <div class="Assessment">
+                    <p class="Assessment__text columns">Quiz 3</p>
+                    <p class="Assessment__text columns">{{Quiz3Grade}}</p>
+                </div>
+                <div class="Assessment">
+                    <p class="Assessment__text columns">Quiz 4</p>
+                    <p class="Assessment__text columns">{{Quiz4Grade}}</p>
+                </div>
+                <div class="Assessment">
+                    <p class="Assessment__text columns">Assignment 1</p>
+                    <p class="Assessment__text columns">{{Assignment1Grade}}</p>
+                </div>
+                <div class="Assessment">
+                    <p class="Assessment__text columns">Assignment 2</p>
+                    <p class="Assessment__text columns">{{Assignment2Grade}}</p>
+                </div>
+                <div class="Assessment">
+                    <p class="Assessment__text columns">Assignment 3</p>
+                    <p class="Assessment__text columns">{{Assignment3Grade}}</p>
+                </div>
+                <div class="Assessment">
+                    <p class="Assessment__text columns">Midterm Exam</p>
+                    <p class="Assessment__text columns">{{MidtermGrade}}</p>
+                </div>
+                <div class="Assessment">
+                    <p class="Assessment__text columns">Final Exam</p>
+                    <p class="Assessment__text columns">{{FinalGrade}}</p> 
+                </div>
+            </div><!-- end of grade display container-->
+            
+            <div class="ModalWindow" id="modalWindow">
+                <form action="remarkform" method="post" class="RequestItemsCon">
+                    <input type="button" id="closebttn" class=" Request__submitBTTN" value="X">
+                    <input name = "UtorID" type="text" class="Request__items" placeholder="student ID" required>
+                    <input name = "Remark_Category" type="text" class="Request__items" placeholder="Remark Item" required>
+                    <input name = "Remark_Info" type="text" class="Request__items" placeholder="Reason for request" required>
+                    <input type="submit" class="Request__submitBTTN" value="Submit">
+                </form><!-- end of reemar form -->
+            </div> <!-- end of modal window-->
+        </div><!-- end of main container-->
+        
+        
+        <div class='fNote'>
+            <div class='fNoteContent'>
+                <a href='http://web.cs.toronto.edu'> UofT Computer Science Department </a>
+                <p> Site Design by Anshul & George </p>
+            </div><!--footer content div -->
+			<div class='socialButton'>
+				<a href="https://www.facebook.com/UofTCompSci/" class="social fab fa-facebook-f"></a>
+				<a href="https://twitter.com/UofTCompSci?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class=" social fab fa-twitter"></a>
+                <a href='https://www.utoronto.ca' class="social fas fa-university"></a>
+			</div><!-- end of All socialButton div-->
+        </div><!-- end of footer div-->
+        <script type='text/javascript' src="static/Jscripts/submenu.js"></script>
+        <script type="text/javascript" src="static/Jscripts/modal.js"></script>
+    </body>
+</html>

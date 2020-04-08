@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport'  content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' type='text/css' href="static/StyleSheets/Basiclayout.css">
+        <link rel='stylesheet' type='text/css' href="static/fonts/fontawesome/css/all.css">
+                <link rel='stylesheet' type='text/css' href="static/StyleSheets/instructorpro.css">
+        <title>Profile</title>
+    </head>
+    <body id="main">
+        <nav>
+                        <ul class="navbarContainer">
+                                <li class="navBarItems nav-condensedMenu">
+                                        <i class="fas fa-bars" id='opensidebttn'></i>
+                                        <ul class="navBar-SubmenuContainer" id="sideNav">
+                                                <li id="closesidebttn" class="Submenu-item closeBTTN fas fa-times"></li>
+                                                <li class="Submenu-item"><a href="assignments.html">Assignment</a></li>
+                                                <li class="Submenu-item"><a href="lab.html">Lab</a></li>
+                                                <li class="Submenu-item"><a href="Lecture.html">Lecture</a></li>
+                                                <li class="Submenu-item"><a href="resources.html">Resources</a></li>
+                                                <li class="Submenu-item"><a href="contacts.html">Contact Us</a></li>
+                                                <li class="Submenu-item"><a href="/logout">Logout</a></li>
+                                        </ul> <!-- end of Navbar sub menu -->
+                                </li>
+                                <li class="navBarItems Middle-Navcontent"><a href='signIn_Index.html'>Home</a></li>
+                                <li class="navBarItems"><a href='/profile'>Profile</a></li>
+                        </ul> <!--  end navbar container -->
+                </nav> <!-- end of nav bar section -->
+        
+        <div class="mainContainer">
+            <div class="profileDisplayContainer">
+                <img src='static/images/Miscellaneous/Unknown-person.gif' class="Profile-img" >
+                <h2 class="displayInfo-header" id="display-Name">{{DisplayName}}</h2>
+                <div class="displayInfo-window"></div>
+                <div class="instructorControls">
+                        <p class="control-items">Total Students</p>
+                        <p class="control-items">{% for count in student_count %} {{count['Count']}} {%endfor%}</p>
+                        <p class="control-items">Class Average</p>
+                        <p class="control-items">78%</p>
+                </div>
+                <div class="instructorControls2">
+                        <button type="button" class="control-items"><a href="instructorGrades.html">View/Post Grades</a></button><br>
+                        <button type="button" class="control-items"><a href="feedback.html">View Feedback</button>
+                </div>
+            </div> <!--end of profile display container--> 
+        </div>
+        <div class='fNote'>
+            <div class='fNoteContent'>
+                <a href='http://web.cs.toronto.edu'> UofT Computer Science Department </a>
+                <p> Site Design by Anshul & George </p>
+            </div><!--footer content div -->
+            <div class='socialButton'>
+                <a href="https://www.facebook.com/UofTCompSci/" class="social fab fa-facebook-f"></a>
+                <a href="https://twitter.com/UofTCompSci?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class=" social fab fa-twitter"></a>
+                <a href='https://www.utoronto.ca' class="social fas fa-university"></a>
+            </div><!-- end of All socialButton div-->
+        </div><!-- end of footer div-->
+        <script type='text/javascript' src="static/Jscripts/submenu.js"></script>
+        <script type="text/javascript" src="static/Jscripts/modal.js"></script>
+    </body>
+</html>
