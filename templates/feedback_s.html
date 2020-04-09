@@ -9,6 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="static/StyleSheets/feedbacks.css">
 	<link rel="stylesheet" type="text/css" href="static/StyleSheets/headerfooter.css">
 
+	<script type = "text/javascript">
+		function feedback_val(){
+			alert('You have succesfully submitted your feedback.');
+		}
+	</script>
+
 
 </head>
 
@@ -54,7 +60,7 @@
 
 			<div class = "formsection">
 	
-				<form action = "addfeedback" method = "POST" onsubmit = "return confirm('You have successfully submitted your feedback.')">
+				<form action = "addfeedback" method = "POST" onsubmit = "return feedback_val()">
 
 					<label for = "Menu"><strong>Choose the Instructor you are submitting the remark request for:</strong></label>
 		
@@ -104,7 +110,6 @@
 	
 	</section>
 
-	<script src="app.js"></script>
 </div>
 
 <br><br>

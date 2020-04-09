@@ -9,6 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="static/StyleSheets/gradei.css">
 	<link rel="stylesheet" type="text/css" href="static/StyleSheets/headerfooter.css">
 
+	<script type = "text/javascript">
+		function grades_val(){
+			confirm('You have succesfully entered the grades.');
+		}
+	</script>
+
 </head>
 
 <body>
@@ -51,7 +57,7 @@
 
 			<div class = "formsection">
 	
-				<form action = "EnterGrades" method="POST" onsubmit = "return confirm('You have successfully entered the marks.')">
+				<form action = "EnterGrades" method="POST" onsubmit = "return grades_val()">
 	
 					<label for = "StudentNumber"><strong>Student Number: </strong></label>
 	
