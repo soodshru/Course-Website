@@ -49,6 +49,25 @@
 	
 	</div>
 
+	<script type = "text/javascript">
+
+		window.onload = function () {
+			const location = window.location.pathname;
+
+			const a = location.slice(1).split('&').reduce((acc,curr) =>
+			{
+				const s = curr.split("=");
+				acc[s[0]]=s[1];
+				return acc;
+			});
+
+				if (a.error) {
+					alert(a.error)
+				}
+		}
+
+	</script>
+	
 </body>
 
 </html>
