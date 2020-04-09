@@ -59,9 +59,17 @@
 	
 				<form action = "EnterGrades" method="POST" onsubmit = "return grades_val()">
 	
-					<label for = "StudentNumber"><strong>Student Number: </strong></label>
+					<label for = "StudentNumber"><strong>Choose Student Number: </strong></label>
 	
-					<input type = "text" id="StudentNumber" name = "StudentNumber">
+					<select id = "stds" name = "stds" class = "assgn">
+			           
+			            {% for student in students%}
+			           
+			            	<option value = "{{ student['UtorID'] }}">{{ student['UtorID'] }}</option>
+
+			            {% endfor %}
+			           
+			        </select>
 	
 					<br> </br>
 	
