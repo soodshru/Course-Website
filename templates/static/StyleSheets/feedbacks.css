@@ -1,0 +1,91 @@
+.title {
+  margin-top: 90px;
+  background-color: #F1F1F3;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.title_sec {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: solid;
+  border-color: #C8C8C8;
+  display: block;
+}
+
+.title_sec h1 {
+  color: #127a8c;
+  font-size: 70px;
+  text-align: center;
+  margin:10px;
+}
+
+.feedback {
+  margin-top: 30px;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.contact_us {
+  padding-left: 20px;
+  padding-right: 20px;
+  border: solid;
+  border-color: #C8C8C8;
+  display: block;
+  border-radius: 20px;
+  background-color: #F1F1F3;
+}
+
+.contact_us h1 {
+  color: #127a8c;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  font-size: 40px;
+  border-bottom: solid;
+  border-bottom-color: #B1B1B1;
+}
+
+.contact_us p{
+  font-size: 22px;
+}
+
+.contact_us label{
+  font-size: 20px;
+}
+
+.feedback input[type=text] {
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 15px;
+}
+
+.feedback textarea {
+  width: 100%;
+}
+
+.Submit {
+  align-self: center;
+  margin-top: 15px;
+  font-size: 30px;
+  border-radius: 0.4rem;
+  box-shadow: 3px 3px 5px 6px #000000;
+}
+input[type=submit] {
+  width:17%;
+  height:50px;
+  font-size:25px;
+  background-color: #127a8c;
+  color: white;
+  align-items: center;
+}
+
+input[type=submit]:hover{
+  font-size: 30px;
+}
+
+.instructor {
+  height : 25px;
+  width : 150px;
+  font-size: 17px;
+}

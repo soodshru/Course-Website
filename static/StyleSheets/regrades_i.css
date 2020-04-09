@@ -20,14 +20,13 @@
   margin:10px;
 }
 
-.feedbacks {
+.requests {
   margin-top: 30px;
   margin-left: 70px;
   margin-right: 70px;
-  font-size: 17px;
 }
 
-.feedback {
+.request {
   padding-left: 10px;
   padding-right: 10px;
   border: solid;
@@ -35,5 +34,21 @@
   display: block;
   border-radius: 20px;
   background-color: #F1F1F3;
+}
+
+.request h1 {
+  color: #127a8c;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  font-size: 30px;
+  border-bottom: solid;
+  border-bottom-color: #B1B1B1;
+}
+
+.request ul {
+  list-style: none;
+}
+
+.request li {
   font-size: 17px;
 }

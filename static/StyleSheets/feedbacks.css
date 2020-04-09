@@ -64,20 +64,24 @@
   width: 100%;
 }
 
-.feedback input[type=submit]{
-  margin-bottom: 10px;
-  font-size: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-weight: bold;
-  background-color: #1DA9C1;
+.Submit {
+  align-self: center;
+  margin-top: 15px;
+  font-size: 30px;
+  border-radius: 0.4rem;
+  box-shadow: 3px 3px 5px 6px #000000;
+}
+input[type=submit] {
+  width:17%;
+  height:50px;
+  font-size:25px;
+  background-color: #127a8c;
+  color: white;
+  align-items: center;
 }
 
 input[type=submit]:hover{
-  background-color: #127a8c;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .instructor {
