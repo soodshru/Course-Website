@@ -251,16 +251,18 @@ def grades_i():
         return render_template('login.html')
     else:
         # tells Flask to render the HTML page called /grades_i.html
+        sql = """ SELECT UtorID,Name FROM accounts WHERE type = 'student' """
+        students = db.engine.execute(text(sql))
         sql = """ SELECT * FROM Grades """
         class1 = db.engine.execute(text(sql))
-        return render_template('/grades_i.html', class1 = class1)
+        return render_template('/grades_i.html', class1 = class1, students = students)
 
 @app.route('/EnterGrades', methods=['GET','POST'])
 def Entergrades():
     if request.method == 'POST':
         type = str(request.form.get('assgn'))
         grade = str(request.form.get('grade'))
-        stdid = str(request.form.get('StudentNumber'))
+        stdid = str(request.form.get('stds'))
         sql = """ SELECT * FROM Grades """
         students = db.engine.execute(text(sql))
         for stud in students :
