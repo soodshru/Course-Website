@@ -9,8 +9,23 @@
 	<link rel="stylesheet" type="text/css" href="static/StyleSheets/signup.css">
 
 	<script type = "text/javascript">
+
 		function validate(){
-			alert('You have succesfully signed up!');
+			location = window.location.pathname;
+			location.slice(1).split('&').reduce((acc,curr) =>
+			{
+				const s = curr.split("=");
+				acc[s[0]]=s[1];
+			});
+
+			for (let a in acc){
+				if (acc[a] == "error") {
+					alert('An error has occured. You have entered a utorid that already exists.')
+				}
+				else {
+					alert('You have succesfully signed up!')''
+				}
+			}
 		}
 	</script>
 </head>
@@ -25,7 +40,7 @@
 		<!-- A form for the user to enter & submit all their information to create an account -->
 		<div class="login_box">
 
-			<form id="signup" class="userform" action = "createaccform"  method="POST" onsubmit = "return validate()" >
+			<form id="signup" class="userform" action = "createaccform" name="signup" method="POST"  >
 
 				<br>
 				
@@ -47,7 +62,7 @@
 				
 				<input type="password" name="Password" class="UserInput" placeholder="Password" required><br><br>
 				
-				<input type="submit"  value="Submit" id = "submit" class="logBttn">
+				<input type="submit"  value="Submit" id = "submit" class="logBttn" onload="validate()">
 			</form>
 			
 			<br><br>
@@ -60,7 +75,9 @@
 		
 		<p>Site design by Shruti Sood and Jeevika Baskaran</p>
 	
-	</div>\
+	</div>
+
+	<script src = "static/app.js"></script>
 
 </body>
 
