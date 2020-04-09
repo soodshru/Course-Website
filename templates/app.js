@@ -1,7 +1,7 @@
-function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
+function validate() {
+	confirm ("You have signed up sucessfully")
+}
+
+function regrade_val() {
+	return confirm('You have successfully entered the regrade.');
 }
