@@ -4,30 +4,25 @@ from flask import Flask, session, redirect, request, render_template, g
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import text
 
-
 app=Flask(__name__)
 app.secret_key = 'its_a_secret'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///assignment3.db'
 db = SQLAlchemy(app)
-
 
 @app.route('/')
 def root():
     # tells Flask to render the HTML page called login.html
     return render_template('login.html')
 
-
 @app.route('/login.html')
 def login():
     # tells Flask to render the HTML page called login.html
     return render_template('login.html')
 
-
 @app.route('/login_i.html')
 def login_i():
     # tells Flask to render the HTML page called login_i.html
     return render_template('login_i.html')
-
 
 @app.route('/loginforminstructor', methods=['GET','POST'])
 def check_data_instructor():
@@ -47,7 +42,6 @@ def check_data_instructor():
                 if acc['UtorID'] == utorid and acc['Password'] == pw:
                     session['current_login'] = utorid
                     session['name'] = acc['Name']
-                    session['login_type'] = 'instructor'
                     return render_template('index_i.html')
             else:
                 return render_template('login_i.html')
@@ -57,7 +51,6 @@ def check_data_instructor():
 def login_s():
     # tells Flask to render the HTML page called login_s.html
     return render_template('login_s.html')
-
 
 @app.route('/loginformstudent', methods=['GET','POST'])
 def check_data_student():
@@ -77,27 +70,22 @@ def check_data_student():
                 if acc['UtorID'] == utorid and acc['Password'] == pw:
                     session['current_login'] = utorid
                     session['name'] = acc['Name']
-                    session['login_type'] = 'student'
                     return render_template('index_s.html')
             else:
                 flash ("Unidentified Username or Password for Student!")
                 return render_template('login_s.html')
-
 
 @app.route('/logout')
 def logout():
     # removes user from session
     session.pop('current_login', None)
     session.pop('name', None)
-    session.pop('login_type', None)
     return redirect('/login.html')
-
 
 @app.route('/signup.html')
 def signup():
     # tells Flask to render the HTML page called signup.html
     return render_template('signup.html')
-
 
 @app.route('/createaccform', methods=['GET','POST'])
 def createacc():
@@ -120,12 +108,8 @@ def announcements_i():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'instructor':
-            # tells Flask to render the HTML page called /announcements_i.html
-            return render_template('/announcements_i.html')
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /announcements_i.html
+        return render_template('/announcements_i.html')
 
 @app.route('/announcements_s.html')
 def announcements_s():
@@ -133,12 +117,8 @@ def announcements_s():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'student':
-            # tells Flask to render the HTML page called /announcements_s.html
-            return render_template('/announcements_s.html')
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /announcements_s.html
+        return render_template('/announcements_s.html')
 
 @app.route('/evaluations_i.html')
 def evaluations_i():
@@ -146,12 +126,8 @@ def evaluations_i():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'instructor':
-            # tells Flask to render the HTML page called /evaluations_i.html
-            return render_template('/evaluations_i.html')
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /evaluations_i.html
+        return render_template('/evaluations_i.html')
 
 @app.route('/evaluations_s.html')
 def evaluations_s():
@@ -159,12 +135,8 @@ def evaluations_s():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'student':
-            # tells Flask to render the HTML page called /evaluations_s.html
-            return render_template('/evaluations_s.html')
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /evaluations_s.html
+        return render_template('/evaluations_s.html')
 
 @app.route('/index_i.html')
 def index_i():
@@ -172,12 +144,8 @@ def index_i():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'instructor':
-            # tells Flask to render the HTML page called /index_i.html
-            return render_template('/index_i.html')
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /index_i.html
+        return render_template('/index_i.html')
 
 @app.route('/index_s.html')
 def index_s():
@@ -185,12 +153,8 @@ def index_s():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'student':
-            # tells Flask to render the HTML page called /index_s.html
-            return render_template('/index_s.html')
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /index_s.html
+        return render_template('/index_s.html')
 
 @app.route('/labs_i.html')
 def labs_i():
@@ -198,12 +162,8 @@ def labs_i():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'instructor':
-            # tells Flask to render the HTML page called /labs_i.html
-            return render_template('/labs_i.html')
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /labs_i.html
+        return render_template('/labs_i.html')
 
 @app.route('/labs_s.html')
 def labs_s():
@@ -211,12 +171,8 @@ def labs_s():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'student':
-            # tells Flask to render the HTML page called /labs_s.html
-            return render_template('/labs_s.html')
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /labs_s.html
+        return render_template('/labs_s.html')
 
 @app.route('/lectures_i.html')
 def lectures_i():
@@ -224,12 +180,8 @@ def lectures_i():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'instructor':
-            # tells Flask to render the HTML page called /lectures_i.html
-            return render_template('/lectures_i.html')
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /lectures_i.html
+        return render_template('/lectures_i.html')
 
 @app.route('/lectures_s.html')
 def lectures_s():
@@ -237,12 +189,8 @@ def lectures_s():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'student':
-            # tells Flask to render the HTML page called /lectures_s.html
-            return render_template('/lectures_s.html')
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /lectures_s.html
+        return render_template('/lectures_s.html')
 
 @app.route('/feedback_i.html')
 def feedback_i():
@@ -250,14 +198,10 @@ def feedback_i():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'instructor':
-            sql = """ SELECT * FROM Feedback WHERE UtorID = '{}' """.format(session['current_login'])
-            feedbacks = db.engine.execute(text(sql))
-            # tells Flask to render the HTML page called /feedback_i.html
-            return render_template('/feedback_i.html', feedbacks = feedbacks)
-        else:
-            return render_template('login.html')
-
+        sql = """ SELECT * FROM Feedback WHERE UtorID = '{}' """.format(session['current_login'])
+        feedbacks = db.engine.execute(text(sql))
+        # tells Flask to render the HTML page called /feedback_i.html
+        return render_template('/feedback_i.html', feedbacks = feedbacks)
 
 @app.route('/feedback_s.html')
 def feedback_s():
@@ -265,14 +209,10 @@ def feedback_s():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'student':
-            sql = """ SELECT UtorID,Name FROM accounts WHERE type = 'instructor' """
-            instructors = db.engine.execute(text(sql))
-            # tells Flask to render the HTML page called /feedback_s.html
-            return render_template('/feedback_s.html', instructors = instructors)
-        else:
-            return render_template('login.html')
-
+        sql = """ SELECT UtorID,Name FROM accounts WHERE type = 'instructor' """
+        instructors = db.engine.execute(text(sql))
+        # tells Flask to render the HTML page called /feedback_s.html
+        return render_template('/feedback_s.html', instructors = instructors)
 
 @app.route('/addfeedback', methods=['GET','POST'])
 def addFeedback():
@@ -286,19 +226,14 @@ def addFeedback():
         db.engine.execute(text(sql))
         return redirect('/feedback_s.html')
 
-
 @app.route('/resources_i.html')
 def resources_i():
     if session.get('current_login') == None:
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'instructor':
-            # tells Flask to render the HTML page called /resources_i.html
-            return render_template('/resources_i.html')
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /resources_i.html
+        return render_template('/resources_i.html')
 
 @app.route('/resources_s.html')
 def resources_s():
@@ -306,12 +241,8 @@ def resources_s():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'student':
-            # tells Flask to render the HTML page called /resources_s.html
-            return render_template('/resources_s.html')
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /resources_s.html
+        return render_template('/resources_s.html')
 
 @app.route('/grades_i.html')
 def grades_i():
@@ -319,14 +250,10 @@ def grades_i():
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'instructor':
-            # tells Flask to render the HTML page called /grades_i.html
-            sql = """ SELECT * FROM Grades """
-            class1 = db.engine.execute(text(sql))
-            return render_template('/grades_i.html', class1 = class1)
-        else:
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /grades_i.html
+        sql = """ SELECT * FROM Grades """
+        class1 = db.engine.execute(text(sql))
+        return render_template('/grades_i.html', class1 = class1)
 
 @app.route('/EnterGrades', methods=['GET','POST'])
 def Entergrades():
@@ -343,36 +270,31 @@ def Entergrades():
                 return redirect('/grades_i.html')
         return redirect('/grades_i.html')
 
-
 @app.route('/grades_s.html')
 def grades_s():
     if session.get('current_login') == None:
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'student':
-            # tells Flask to render the HTML page called /grades_s.html
-            Assgn1 = 'TBA'
-            Assgn2 = 'TBA'
-            Assgn3 = 'TBA'
-            TT = 'TBA'
-            Fin = 'TBA'
-            name = 'Unknown'
-            sql = """ SELECT * FROM Grades """
-            grades = db.engine.execute(text(sql))
-            for student in grades:
-                if session['current_login'] == student['UtorID'] :
-                    Assgn1 = student['A1']
-                    Assgn2 = student['A2']
-                    Assgn3 = student['A3']
-                    TT = student['Midterm']
-                    Fin = student['Final']
-                    name = session['name']
-            return render_template('grades_s.html', UserName = name, Ass1 = Assgn1, Ass2 = Assgn2, Ass3 = Assgn3, Mid = TT,
-                                   Fi = Fin)
-        else :
-            return render_template('login.html')
-
+        # tells Flask to render the HTML page called /grades_s.html
+        Assgn1 = 'TBA'
+        Assgn2 = 'TBA'
+        Assgn3 = 'TBA'
+        TT = 'TBA'
+        Fin = 'TBA'
+        name = 'Unknown'
+        sql = """ SELECT * FROM Grades """
+        grades = db.engine.execute(text(sql))
+        for student in grades:
+            if session['current_login'] == student['UtorID'] :
+                Assgn1 = student['A1']
+                Assgn2 = student['A2']
+                Assgn3 = student['A3']
+                TT = student['Midterm']
+                Fin = student['Final']
+                name = session['name']
+        return render_template('grades_s.html', UserName = name, Ass1 = Assgn1, Ass2 = Assgn2, Ass3 = Assgn3, Mid = TT,
+                               Fi = Fin)
 
 @app.route('/RemarkRequest', methods=['GET','POST'])
 def remarkrequest():
@@ -384,20 +306,16 @@ def remarkrequest():
         db.engine.execute(text(sql))
         return redirect('/grades_s.html')
 
-
 @app.route('/regrades_i.html')
 def regrades_i():
     if session.get('current_login') == None:
         # if user not logged in send them to the login page
         return render_template('login.html')
     else:
-        if session.get('login_type') == 'instructor':
-            sql = """ SELECT * FROM RemarkRequests """
-            requests = db.engine.execute(text(sql))
-            # tells Flask to render the HTML page called regrades_i.html
-            return render_template('regrades_i.html', requests = requests)
-        else :
-            return render_template('login.html')
+        sql = """ SELECT * FROM RemarkRequests """
+        requests = db.engine.execute(text(sql))
+        # tells Flask to render the HTML page called regrades_i.html
+        return render_template('regrades_i.html', requests = requests)
 
 
 if __name__ == '__main__':
