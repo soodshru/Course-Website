@@ -1,0 +1,54 @@
+.assignments {
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 90px;
+}
+
+.tests {
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 30px;
+}
+
+.information {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: solid;
+  border-color: #C8C8C8;
+  display: block;
+  background-color: #F1F1F3;
+}
+
+.information h1 {
+  color: #127a8c;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  font-size: 30px;
+  border-bottom: solid;
+  border-bottom-color: #B1B1B1;
+}
+
+.information h2 {
+  padding-left: 15px;
+}
+
+.information p {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 18px;
+}
+
+.information a:hover{
+  color: #00496a;
+  font-weight:bold;
+}
+
+.information ul {
+  list-style: none;
+  border-bottom: solid;
+  border-bottom-color: #B1B1B1;
+}
+
+.information li p {
+  font-size: 17px;
+}
