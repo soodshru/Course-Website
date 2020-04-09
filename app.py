@@ -266,6 +266,7 @@ def Entergrades():
         for stud in students :
             if stud['UtorID'] == stdid :
                 sql = """ UPDATE Grades SET {} = '{}' WHERE UtorID = '{}' """.format(type, grade, stdid)
+                students.close()
                 db.engine.execute(text(sql))
                 return redirect('/grades_i.html')
         return redirect('/grades_i.html')
