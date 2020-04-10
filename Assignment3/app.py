@@ -343,4 +343,4 @@ def regrades_i():
 
 
 if __name__ == '__main__':
-    app.run(debug = 'True')
+    app.run()
