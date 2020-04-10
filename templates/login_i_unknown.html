@@ -1,0 +1,75 @@
+<!DOCTYPE html>	
+
+<html>
+
+<head>
+	
+	<title>Incorrect Instructor Login</title>
+	
+	<link rel="stylesheet" type="text/css" href="static/StyleSheets/login.css">
+
+</head>
+
+<body>
+
+	<h2>Entered Incorrect Instructor User Name or Password<br>Please try again!</h2>
+
+	<br>
+
+	<div class ="container">
+
+		<!-- A form for the instructor to enter & submit their username and password -->
+		<div class="login_box">
+
+			<form class="userform" action = "loginforminstructor" method="POST">
+
+				<br>
+				
+				<span class="Login_title">Enter your Login details</span> <br>
+				
+				<input type="text" name="LoginID" class="UserInput" placeholder="User Name (UtorId)" required>
+				
+				<input type="password" name="Password" class="UserInput" placeholder="Password" required><br><br>
+				
+				<input type="submit" value="Submit" class="logBttn">
+			
+			</form>
+			
+			<br><br>
+			
+			<a class= "newlink" href="signup.html">Need a New Account? Click here</a>
+		
+		</div>
+	
+	</div>
+	
+	<div class = "footer">
+
+		<a href="https://web.cs.toronto.edu/" target="_blank">Faculty of Computer Science at UofT</a>
+		
+		<p>Site design by Shruti Sood and Jeevika Baskaran</p>
+	
+	</div>
+
+	<script type = "text/javascript">
+
+		window.onload = function () {
+			const location = window.location.pathname;
+
+			const a = location.slice(1).split('&').reduce((acc,curr) =>
+			{
+				const s = curr.split("=");
+				acc[s[0]]=s[1];
+				return acc;
+			});
+
+				if (a.error) {
+					alert(a.error)
+				}
+		}
+
+	</script>
+	
+</body>
+
+</html>

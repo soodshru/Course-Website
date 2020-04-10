@@ -5,6 +5,12 @@ body {
   background-color: #E9E9E9;
 }
 
+h2 {
+  color:red;
+  text-align: center;
+  padding-left : 40px;
+}
+
 .container {
   height: 100%;
   display: flex;
