@@ -251,7 +251,7 @@ def grades_i():
         return render_template('login.html')
     else:
         # tells Flask to render the HTML page called /grades_i.html
-        sql = """ SELECT UtorID,Name FROM accounts WHERE type = 'student' """
+        sql = """ SELECT UtorID FROM accounts WHERE type = 'student' """
         students = db.engine.execute(text(sql))
         sql = """ SELECT * FROM Grades """
         class1 = db.engine.execute(text(sql))
