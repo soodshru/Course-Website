@@ -24,6 +24,11 @@ def login_i():
     # tells Flask to render the HTML page called login_i.html
     return render_template('login_i.html')
 
+@app.route('/login_i_unknown.html')
+def login_i_unknown():
+    # tells Flask to render the HTML page called login_i.html
+    return render_template('login_i_unknown.html')
+
 @app.route('/loginforminstructor', methods=['GET','POST'])
 def check_data_instructor():
     if request.method == 'POST':
@@ -50,6 +55,11 @@ def check_data_instructor():
 def login_s():
     # tells Flask to render the HTML page called login_s.html
     return render_template('login_s.html')
+
+@app.route('/login_s_unknown.html')
+def login_i_unknown():
+    # tells Flask to render the HTML page called login_i.html
+    return render_template('login_s_unknown.html')
 
 @app.route('/loginformstudent', methods=['GET','POST'])
 def check_data_student():
