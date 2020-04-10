@@ -57,7 +57,7 @@ def login_s():
     return render_template('login_s.html')
 
 @app.route('/login_s_unknown.html')
-def login_i_unknown():
+def login_s_unknown():
     # tells Flask to render the HTML page called login_i.html
     return render_template('login_s_unknown.html')
 
