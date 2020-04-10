@@ -1,0 +1,35 @@
+body{
+		background-color: FloralWhite;
+
+		font-family: Times New Roman, Times, sans-serif; 
+		font-size: 16;
+		font-weight: normal;
+		letter-spacing: 0.1em;
+
+		line-height: 1.6em;
+	}
+a{
+	color: midnightblue;
+     }
+a{
+     	font-size: 20px;
+     }
+  a {
+	text-decoration: none;
+}
+
+a:hover{
+	color: Coral;
+}
+footer{
+	
+ 	
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	
+}
+h4
+{
+	font-size: 16px;
+}

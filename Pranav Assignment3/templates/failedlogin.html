@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Failed Login</title>
+	<link rel="stylesheet" type="text/css" href="static/failedlogin.css">
+</head>
+<body>
+	<div>
+			<h3>Incorrect Utorid Provided. Authenticate Yourself Again.</h3>
+	</div>
+	<div>
+		<form action= "{{ url_for('logmein') }}" method="POST">
+		<fieldset>
+			<img src="static/UofT-Logo-1.jpg" alt="image of Anna_Bretscher" width="680px" height="680px" align="right">
+			<legend>User Details:</legend>
+			<br>
+			<br>
+			<label for="user">UTorID</label>
+			<input type="text" name="user" required="required" /> </title> <br />
+			<br>
+			<label for="password">Password: </label>
+			<input type="password" name="password" required="required" /><br />
+			<br>
+			<label for="usertype">UserType</label>
+			<input type="checkbox" name="usertype" value="Instructor" checked="checked" />Instructor
+			<input type="checkbox" name="usertype" value="Student" /> Student
+			<br />
+			<br>
+			<input type="submit" value="Log In">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+		</fieldset>
+	</form>
+	</div>
+</body>
+</html>

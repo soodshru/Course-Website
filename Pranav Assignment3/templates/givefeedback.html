@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Give Feedback</title>
+	<script src="static/gfeedback.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/givefeedback.css">
+</head>
+<body>
+
+	<h4>List of All Instructors :</h4>
+		<ul style="list-style-type:none;">
+		{% for row in rows %}
+				<li>{{ row["instructor"] }}<li>
+		{% endfor %}
+		</ul>
+
+		<div>
+			<img src="static/abbas.png" id="img1" onmouseover="newImage()" onmouseout="oldImage()" width="100" />
+		</div>
+	<br>
+	<br>
+	<form action="{{ url_for('sendfeedback2') }}" method="POST" id="myform">
+			<label for="instructor">Specify Instructor: </label>
+			<input type="text" name="instructor" placeholder="Instructor Name" onfocus="handleOnfocus(this)">
+			<br>
+			<label for="q1">What do you like about the instructor teaching ?</label> <br>
+			<textarea name = "q1" cols="100" rows="6" id="t1" onfocus="handleOnfocus1(this)"> </textarea><br>
+			<br>
+			<label for="q1">What do you recommend the instructor to do to improve their teaching?</label> <br>
+			<textarea name = "q2" cols="100" rows="6" id="t2" onfocus="handleOnfocus1(this)"> </textarea><br>
+			<br>
+			<label for="q1">What do you like about the labs?</label> <br>
+			<textarea name = "q3" cols="100" rows="6" id="t3" onfocus="handleOnfocus1(this)"> </textarea><br>
+			<br>
+			<label for="q1">What do you recommend the lab instructors to do to improve their lab teaching?</label> <br>
+			<textarea name = "q4" cols="100" rows="6" id="t4" onfocus="handleOnfocus1(this)"> </textarea><br>
+			<br>
+			<label for="q1">Any Other Comments</label> <br>
+			<textarea name = "q5" cols="100" rows="6"  id="t5" onfocus="handleOnfocus1(this)"> </textarea><br>
+			<input type="submit" name="submit" value="Submit Feedback" /> <input  id="button" onclick="resetform()" type="button" value="Reset">
+	</form>
+	<h4><a href="studentlogin.html">Go Back To Main Student Portal</a></h4>
+</body>
+<footer>
+		<div>
+			<hr>
+				<p align="right"><a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">Link to Computer Sciece Faculty at UTSC</a></p>
+				<p align="right"> &copy; Dhruv Goyal $$$$ Pranav Sethi</p>
+		</div>
+	</footer>
+</html>

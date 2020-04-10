@@ -1,0 +1,32 @@
+body{
+		background-color: FloralWhite;
+
+		font-family: Times New Roman, Times, sans-serif; 
+		font-size: 16;
+		font-weight: normal;
+		letter-spacing: 0.1em;
+
+		line-height: 1.6em;
+	}
+	h3
+	{
+		color: midnightblue;
+	}
+	legend{
+		font-size: 45px;
+	}
+	legend{
+		color: midnightblue;
+	}
+	label {
+		 color: midnightblue;
+	}
+	input {
+		color: midnightblue;
+	}
+	label{
+		font-size: 20px;
+	 }
+	 input{
+	 	font-size: 20px;
+	 }

@@ -1,0 +1,55 @@
+body{
+		background-color: FloralWhite;
+
+		font-family: Times New Roman, Times, sans-serif; 
+		font-size: 16;
+		font-weight: normal;
+		letter-spacing: 0.1em;
+
+		line-height: 1.6em;
+	}
+h4{
+	font-size: 19px;
+}
+li{
+	font-size: 17px;
+}
+label{
+	color: black;
+}
+input{
+	color: black;
+}
+textarea{
+	color: black;
+}
+label{
+	font-size: 19px;
+}
+input{
+	font-size: 17px;
+}
+textarea{
+	font-size: 19px;
+}
+a{
+	color: midnightblue;
+     }
+a{
+     	font-size: 20px;
+     }
+  a {
+	text-decoration: none;
+}
+
+a:hover{
+	color: Coral;
+}
+footer{
+	
+ 
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	
+}
