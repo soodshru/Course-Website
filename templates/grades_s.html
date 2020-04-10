@@ -9,11 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="static/StyleSheets/gradesS.css">
 	<link rel="stylesheet" type="text/css" href="static/StyleSheets/headerfooter.css">
 
-	<script type = "text/javascript">
-		function remark_val(){
-			confirm('You have succesfully submitted your remark request.');
-		}
-	</script>
 
 </head>
 
@@ -83,7 +78,7 @@
 
 			<div class = "formsection">
 		
-				<form action = "RemarkRequest" method = "POST" onsubmit = "return remark_val()">
+				<form action = "RemarkRequest" method = "POST" onsubmit = "return remark_val1()">
 
 					<label for = "Menu">Choose the assignment you are submitting the remark request for:</label>
 		
@@ -105,7 +100,7 @@
 						
 					<label for = "Message">Message: </label><br>
 
-					<textarea id="Message" name = "Message" placeholder = "Reason for your request..."></textarea>
+					<textarea id="Message" name = "Message" placeholder = "Reason for your request..." required></textarea>
 
 					<br></br>
 
@@ -131,6 +126,7 @@
 
 	</div>
 
+<script src = "/static/app2.js"></script>
 </body>
 
 </html>

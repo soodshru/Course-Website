@@ -9,11 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="static/StyleSheets/gradei.css">
 	<link rel="stylesheet" type="text/css" href="static/StyleSheets/headerfooter.css">
 
-	<script type = "text/javascript">
-		function grades_val(){
-			confirm('You have succesfully entered the grades.');
-		}
-	</script>
 
 </head>
 
@@ -57,7 +52,7 @@
 
 			<div class = "formsection">
 	
-				<form action = "EnterGrades" method="POST" onsubmit = "return grades_val()">
+				<form action = "EnterGrades" method="POST" onsubmit = "return grades_val1()">
 	
 					<label for = "StudentNumber"><strong>Choose Student Number: </strong></label>
 	
@@ -89,7 +84,7 @@
 
 			        <label><strong>:</strong></label>
 	
-					<input type = "text" id="grade" name = "grade">
+					<input type = "text" id="grade" name = "grade" required>
 	
 					<br> </br>
 
@@ -150,7 +145,8 @@
 		<p>Site design by Shruti Sood and Jeevika Baskaran</p>
 	
 	</div>
-
+	
+<script src = "/static/app2.js"></script>
 </body>
 
 </html>
