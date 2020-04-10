@@ -43,8 +43,7 @@ def check_data_instructor():
                     session['current_login'] = utorid
                     session['name'] = acc['Name']
                     return render_template('index_i.html')
-            else:
-                return render_template('login_i.html')
+            return render_template('login_i_unknown.html')
 
 
 @app.route('/login_s.html')
@@ -71,9 +70,7 @@ def check_data_student():
                     session['current_login'] = utorid
                     session['name'] = acc['Name']
                     return render_template('index_s.html')
-            else:
-                flash ("Unidentified Username or Password for Student!")
-                return render_template('login_s.html')
+            return render_template('login_s_unknown.html')
 
 @app.route('/logout')
 def logout():
@@ -87,6 +84,12 @@ def signup():
     # tells Flask to render the HTML page called signup.html
     return render_template('signup.html')
 
+@app.route('/signup_user_exists.html')
+def signup_exists():
+    # tells Flask to render the HTML page called signup.html
+    return render_template('signup_user_exists.html')
+
+
 @app.route('/createaccform', methods=['GET','POST'])
 def createacc():
     if request.method == 'POST':
@@ -94,12 +97,20 @@ def createacc():
         username = str(request.form.get('UserName'))
         loginid = str(request.form.get('LoginID'))
         pw = str(request.form.get('Password'))
+        #if userid already in accounts
+        sql = """ SELECT UtorID FROM accounts """
+        user_ids = db.engine.execute(text(sql))
+        for user_id in user_ids:
+        #if loginid already exists
+            if user_id['UtorID'] == loginid:
+                return render_template('signup_user_exists.html')
+        #if utorid not in accounts
         sql = """ INSERT INTO accounts VALUES ('{}', '{}', '{}', '{}') """.format(type,loginid,username,pw)
         db.engine.execute(text(sql))
         if type == 'student':
             sql = """ INSERT INTO Grades (UtorID)  VALUES ('{}') """.format(loginid)
             db.engine.execute(text(sql))
-        return render_template('login.html')
+            return render_template('login.html')
 
 
 @app.route('/announcements_i.html')
